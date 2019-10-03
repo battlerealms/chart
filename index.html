@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+</head>
+
+<body bgcolor="#191919">
+<style type="text/css">{mso-displayed-decimal-separator:"\."; mso-displayed-thousand-separator:"\,";} 
+    
+.xl151547
+      {padding-top:2px; padding-right:2px; padding-left:2px; padding-bottom:2px; color:orange; font-size:10.0pt; font-weight:400; font-style:medium; text-decoration:none; font-family:Assistant, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0;mso-number-format:General; text-align:center; vertical-align:center; background-color: rgba(0, 0, 0, 0.5); mso-background-source:auto; mso-pattern:auto; white-space:nowrap;}
+      
+.xl161547 
+      {padding-top:2px; padding-right:2px; padding-left:2px; padding-bottom:2px; color:white; font-size:10.0pt; font-weight:800; font-style:medium; text-decoration:none; font-family:Assistant, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0; mso-number-format:General; text-align:general; vertical-align:center; border:2px groove #7F0000; background-color: rgba(0, 0, 0, 0.5); mso-background-source:auto; mso-pattern:auto; white-space:nowrap;}
+      
+.xl251547
+      {padding-top:2px; padding-right:2px; padding-left:2px; padding-bottom:2px; mso-ignore:padding; color:windowtext; font-size:10.0pt; font-weight:400; font-style:medium; text-decoration:none; font-family:Assistant, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0; mso-number-format:General; text-align:center; vertical-align:center; mso-background-source:auto; mso-pattern:auto; white-space:nowrap;}
+      
+.xl261547
+      {padding-top:2px; padding-right:2px; padding-left:2px; padding-bottom:2px; mso-ignore:padding; color:silver; font-size:10.0pt; font-weight:400; font-style:medium; text-decoration:none; font-family:Assistant, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0; mso-number-format:General; text-align:center; vertical-align:center; border:2px groove #442200; mso-background-color: rgba(0, 0, 0, 0.5);background-source:auto; mso-pattern:auto; white-space:normal;}
+      
+.xl271547
+      {padding-top:2px; padding-right:2px; padding-left:2px; padding-bottom:2px; color:silver; font-size:10.0pt; font-weight:400; font-style:medium; text-decoration:none; font-family:Acme, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0; mso-number-format:General; text-align:center; vertical-align:center; border:2px groove #442200; mso-background-source:auto; mso-pattern:auto; white-space:normal;}
+
+.xl271547_D
+      {padding-top:2px; padding-right:2px; padding-left:2px;padding-bottom:2px; color:silver; font-size:10.0pt; font-weight:400; font-family:Assistant, sans-serif,Aubrey; text-align:center; vertical-align:center; border:2px groove #7a3c00; mso-background-color: rgba(0, 0, 0, 0.5);  white-space:normal;}
+      
+.xl271547_S
+      {padding-top:2px; padding-right:2px; padding-left:2px;padding-bottom:2px; color:silver; font-size:10.0pt; font-weight:400; font-family:Assistant, sans-serif,Aubrey; text-align:center; vertical-align:center; border:2px groove #660000; mso-background-color: rgba(0, 0, 0, 0.5);  white-space:normal;}
+      
+.xl271547_W
+      {padding-top:2px; padding-right:2px; padding-left:2px;padding-bottom:2px; color:silver; font-size:10.0pt; font-weight:400; font-family:Assistant, sans-serif,Aubrey; text-align:center; vertical-align:center; border:2px groove #004000; mso-background-color: rgba(0, 0, 0, 0.5);  white-space:normal;}
+      
+.xl271547_L
+      {padding-top:2px; padding-right:2px; padding-left:2px;padding-bottom:2px; color:silver; font-size:10.0pt; font-weight:400; font-family:Assistant, sans-serif,Aubrey; text-align:center; vertical-align:center; border:2px groove #4c004c; mso-background-color: rgba(0, 0, 0, 0.5);  white-space:normal;}
+
+.xl281547
+      {padding-top:2px; ; padding-right:2px; padding-left:2px; padding-bottom:2px; color:white; font-size:10.0pt; font-weight:400; font-style:medium; text-decoration:none; font-family:Assistant, sans-serif,Aubrey; mso-generic-font-family:auto; mso-font-charset:0; mso-number-format:General; text-align:center; vertical-align:center; border:2px solid windowtext; background:#79180B; mso-pattern:auto none; white-space:nowrap;}
+
+a:link, a:visited {
+  mso-background-color: rgba(0, 0, 0, 0.5);
+  border:2px groove #442200;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: #000;
+  color: orange;
+}
+
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  text-align: center;
+  padding: 1px;
+  color: silver;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  border-radius: 0px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: orange;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .4rem;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 800px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: .01rem .01rem;
+}
+</style>
+
+<table cellspacing="2" width="1024" align="center">
+
+<tr>
+   <tr class="xl151547">
+   <td class="xl261547" style="font-size:12pt;text-align:center;" colspan="12"><br>
+<img src="https://i.imgur.com/sD1vJmJ.png" style="width:50%;height:50%">
+<br><b>Version: 1.50q (latest)</b><br><br>
+   <div class="wrap-collabsible" style="font-size:12pt;colspan=12">
+  <input id="collapsible00" class="toggle" type="checkbox">
+  <label for="collapsible00" class="lbl-toggle" tabindex="0"><strong>
+Last edit: October 2,2019 (Full-scale overhaul)</strong></label>
+    <div class="collapsible-content">
+    <div class="content-inner">
+<p>
+<b>Credits to alecThunder and the-barracks.com for creating the original chart. Additional thanks to KnaboKnehtaz for providing a lot of useful info concerning various features, SituVN for making data access easier for every BR player. Fixed, updated and redesigned by KoMiKoZa.</b><br><br>
+All the information in this chart is correct (<i>you may find it weird that Wildeye deals cutting damage, but it's true</i>) and reflects the latest BR version (WOTW). Some ability names are made up by me or other users just to suit the original aesthetic (not all abilities were stated by the developers).<br><br> However, if you find any mistakes or want to suggest something, do so in the Discord server. Thank you.
+</p>
+    </div>
+  </div>
+<br>
+</tr>
+<tr>
+   <tr class="xl151547">
+   <td class="xl261547" style="font-size:12pt;text-align:center;" colspan="12"><br>
+<a href="https://battlerealms.fandom.com">Battle Realms Wiki</a>
+☯ 
+<a href="https://discord.gg/6knxkVe">Battle Realms Community Discord</a>
+☯ 
+<a href="https://pcgamingwiki.com/wiki/Battle_Realms">Battle Realms Fixes & Tweaks</a> ☯ 
+<a href="https://www.reddit.com/r/BattleRealms">Battle Realms Reddit</a><br><br>
+</td>
+</tr>
+<tr>
+   <tr class="xl151547">
+   <td class="xl261547" colspan="12" style="font-size:14pt;text-align:center;">  <br><div class="wrap-collabsible" style="colspan=12">
+  <input id="collapsible0" class="toggle" type="checkbox">
+  <label for="collapsible0" class="lbl-toggle" tabindex="0"><b>How to understand this chart</b></label>
+    <div class="collapsible-content">
+    <div class="content-inner">
+<p>
+<div style="padding-top:1rem; padding-right:4rem; padding-left:4rem; padding-bottom:2rem;font-size:12pt"><b>Damage values</b><br><br>Think of every unit taking <b>standard</b> full damage (100%) from every attack type. Higher values mean <b>weaknesses</b> where as lower values mean <b>resistances</b>.<br><br>
+
+A damage value of <b>50%</b> means the unit will take <b>half</b> incoming damage from an attack because it lowers the <b>default</b> multiplier from 1 (100%) to 0,5 (50%).<br><br>
+
+
+A value of <b>200%</b> means the unit will take <b>double</b> damage because it increases the <b>default</b> multiplier from 1 (100%) to 2 (200%).<br>
+<u>Weaknesses</u> are marked with <font style="color:yellow">yellow</font> color where as <u>Resistances</u>  are <font style="color:lightblue">light blue</font> (moderate) and <font style="color:red">red</font> (strong). <u>Neutral</u> values are grey, 75% is considered neutral as it can't really be called a resistance in the game. There are exceptions in values for certain units.<br><br>
+All values in the game are <font style="color:orange"><strong>multiplicative</strong></font> and <font style="color:orange"><strong>divisable</strong></font>.<br><br> For example, a unit that has cutting damage value at <font style="color:red">25%</font> (strong resistance) is also hit by an active effect of "<font style="color:white">takes 50% more damage from all attack types</font>", this means the unit will take <font style="color:lightblue">50%</font> damage from cutting attacks (moderate (weaker) resistance) <i>[0,25 / 0,5 = 0,5]</i>.<br><br> And if the same unit is hit by "<font style="color:white">takes 50% less damage from all attack types</font>", this means the unit will take <font style="color:red">13%</font> damage from cutting attacks (hardcore resistance) <i>[0,25 * 0,5 = 0,125 / rounded to 0,13 by the game]</i>.<br><br>
+<b>Battle Gears</b><br><br> Damage types or certain effects of Units' BGs.<br><br>
+<b>Innate Abilities</b><br><br> Special features of various units that are omnipresent or triggerable.<br><br>
+<b>AoE = Area of Effect damage</b>  <br> <br>
+<u><b>SP = Unit is available only in the Single Player campaign.</u></b>      </font></p>
+    </div>
+  </div>
+</div>
+
+<br><div class="wrap-collabsible" style="font-size:12pt;colspan=12">
+  <input id="collapsible1" class="toggle" type="checkbox">
+  <label for="collapsible1" class="lbl-toggle" tabindex="0"><b>Terrain effects</b></label>
+    <div class="collapsible-content">
+    <div class="content-inner">
+<p>
+☯ <b>Height advantage</b>: Generally, most of the range units on high ground, towers and horses gain a damage increase of 50%, melee units gain a damage increase of 25%. Range units also deal 50% less damage to units on high ground, melee units deal 25% less damage. The attack distance for rangers is also increased. There are exceptions for certain unique units. Almost all WOTW units are not affected by up/down multipliers (developer's oversight).
+<br><br>
+☯ <b>Environment</b>: Units will have decreased speed when climbing hills (increased speed when going down), going through water or forest areas. Trees also obscure units' LOS. There are exceptions for certain unique units.
+      </p>
+    </div>
+  </div>
+</div>
+<br><div class="wrap-collabsible" style="font-size:12pt;colspan=12">
+  <input id="collapsible2" class="toggle" type="checkbox">
+  <label for="collapsible2" class="lbl-toggle" tabindex="0"><b>Horses</b></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+<p>
+<b>Horses</b> can be used either as a combat unit, or as an addition to peasants. In both cases, combat or economic power gets increased. Wild horses can be seen on the minimap as brown dots.<br><br>
+
+☯ <b>Combat</b>: Horses give their riders <b>height advantage</b> and, in some cases, <b>faster attack speed</b>, as well as <b>more survavibility</b> in combat. They are also able to <b>trample</b> (BG, Lotus' steeds burn enemies and buildings) which can be deadly for certain enemy units, however, mounted units will be unable to use their BGs. All clans (except Wolf) have various upgrades to improve their horses.<br><br>
+
+Certain missile units will kill riders instead of the horses they ride. This depends on their launch angles. Musketeers and Snipers will always damage the rider.<br><br>
+
+☯ <b>Economy</b>: Dragon, Serpent and Lotus Peasants can take horses in order to gather more resources. Each horse can carry 45 units of rice or water, any peasant can carry 15 units.
+
+Tamed horses without a host can be taken by anyone. Steal enemy horses and look after yours!
+
+Wolf peasants will always feed horses to their wolves.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+<div class="wrap-collabsible" style="font-size:12pt;colspan=12">
+  <input id="collapsible3" class="toggle" type="checkbox">
+  <label for="collapsible3" class="lbl-toggle" tabindex="0"><b>Yin/Yang Damage Scaling & Acquisition</b></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+<p>
+All <b>Zen-Masters</b> (heroes, as well as Ninja, Monks and Spirit Wolves) have their damage increased by <b>10% per each Yin/Yang</b> the Clan has (<u>not with every Yin/Yang gained in total</u>). <b>Serpent</b> and <b>Lotus</b> follow the <b>Yin</b> where as <b>Dragon</b> and <b>Wolf</b> follow the <b>Yang</b>.<br><br>
+
+The rule for acquiring Yin/Yang is pretty simple: the more effectively you fight, the more Yin/Yang you get. However, the mechanic is deeper than that and depends on many conditions: <b>inflicted/received damag</b>e, <b>how far you fight from your original starting point</b>, and <b>the amount of points you already have</b>.<br><br>
+
+Building a Town Square will also increase the Yin/Yang generation: <b>50%</b> for Dragon and Lotus, <b>25%</b> for Serpent and Wolf.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+<div class="wrap-collabsible" style="font-size:12pt;colspan=12">
+  <input id="collapsible4" class="toggle" type="checkbox">
+  <label for="collapsible4" class="lbl-toggle" tabindex="0"><b>Building armor and flammability</b></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>
+There are 3 types of flammability that define how easy it is to set a building on fire: <b>simple</b> (only watchtowers), <b>medium</b> (all combat/special buildings) and <b>hard</b> (only keeps).<br><br>
+
+Burning buildings launch <b>embers</b> every 4 seconds, they slightly damage units and are able to set other buildings on fire.<br><br>
+
+Attacking buildings with fire when it's raining will be much less effective, rain will also extinguish any already burning building (and water ricefields).
+<br><br>
+Generally, all buildings receive the same damage except for certain unique ones seen only in the campaigns: <br><br>
+<b>100%</b> from explosive attacks.<br>
+<b>75%</b> from blunt and magical attacks.<br>
+<b>50%</b> from cutting attacks.<br>
+<b>25%</b> from piercing and fire (but fire adds flammability) attacks.
+      </p>
+    </div>
+  </div>
+</div>
+<br>
+</tr>
+
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl281547" style="background:#994C00"><b>Dragon Clan</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Melee</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Missile</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Battle Gears</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Innate Abilities</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Cutting</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Piercing</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Blunt</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Explosive</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Magical</b></td>
+    <td class="xl281547" style="background:#994C00"><b>Fire</b></td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D">Spearman</td>
+    <td class="xl271547_D">Piercing</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">
+  <div class="wrap-collabsible" style="colspan=12">
+  <input id="collapsible_spear" class="toggle" type="checkbox">
+  <label for="collapsible_spear" class="lbl-toggle" tabindex="0"> <b>Whirling Spear</b></label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>(Magic/AoE)</p>
+</div></div></div>
+<input id="collapsible_spear2" class="toggle" type="checkbox">
+<label for="collapsible_spear2" class="lbl-toggle" tabindex="0">
+<b>Stun Spear</b></label><div class="collapsible-content">
+    <div class="content-inner">
+      <p>Enemy Stun (15 sec)</p></div></div>
+</td>
+    <td class="xl271547_D">
+    <input id="collapsible_spear3" class="toggle" type="checkbox">
+<label for="collapsible_spear3" class="lbl-toggle" tabindex="0">
+<b>Spear Mastery</b></label><div class="collapsible-content">
+    <div class="content-inner"><p>Spearman is immune to the effects of height in melee combat.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Archer</td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">Piercing</td>
+    <td class="xl271547_D">
+<input id="collapsible_archer" class="toggle" type="checkbox">
+<label for="collapsible_archer" class="lbl-toggle" tabindex="0">
+<b>Fire Arrows</b></label><div class="collapsible-content"><div class="content-inner"><p>(Fire)</p></div></div>
+</td>
+    <td class="xl271547_D">
+<input id="collapsible_archer2" class="toggle" type="checkbox">
+<label for="collapsible_archer2" class="lbl-toggle" tabindex="0"><b>Stoic Calm</b></label><div class="collapsible-content"><div class="content-inner"><p>Archer's first shot deals double damage if his stamina is full.</p></div></div>
+<input id="collapsible_archer3" class="toggle" type="checkbox">
+<label for="collapsible_archer3" class="lbl-toggle" tabindex="0"><b>Back In Action</b></label><div class="collapsible-content"><div class="content-inner"><p>Archer's stamina recovery rate is very quick.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D">Chemist</td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">Explosive</td>
+    <td class="xl271547_D">
+<input id="collapsible_chemist" class="toggle" type="checkbox">
+<label for="collapsible_chemist" class="lbl-toggle" tabindex="0"><b>Starburst Rockets</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+<input id="collapsible_chemist2" class="toggle" type="checkbox">
+<label for="collapsible_chemist2" class="lbl-toggle" tabindex="0"><b>Mandrake Spores</b></label><div class="collapsible-content"><div class="content-inner"><p>Enemy units deal 50% less damage (10 sec/AoE).</p></div></div>
+    </td>
+    <td class="xl271547_D">
+<input id="collapsible_chemist3" class="toggle" type="checkbox">
+<label for="collapsible_chemist3" class="lbl-toggle" tabindex="0"><b>Healing Herbs</b></label><div class="collapsible-content"><div class="content-inner"><p>When idling, Chemist increases nearby allies' natural healing rate by 200% (30 sec/AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Geisha</td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">☯ <b>Fire Shield</b> (Explosive)</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Dragon Horse</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">☯ <b>Trample</b> (Blunt/AoE)</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+</tr>
+<tr> 
+   <tr class="xl161547"> 
+    <td class="xl271547_D">Dragon Warrior</td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">Magic</td>
+    <td class="xl271547_D">☯ <b>Flame Sword</b> (Fire)</td>
+    <td class="xl271547_D">
+    <input id="collapsible_dw" class="toggle" type="checkbox">
+<label for="collapsible_dw" class="lbl-toggle" tabindex="0"><b>Inspiration</b></label><div class="collapsible-content"><div class="content-inner"><p>Dragon Warrior will increase nearby allies' damage by 20% when fighting.</p></div></div>
+<input id="collapsible_dw2" class="toggle" type="checkbox">
+<label for="collapsible_dw2" class="lbl-toggle" tabindex="0"><b>Heavy Weapon</b></label><div class="collapsible-content"><div class="content-inner"><p>Dragon Warrior's stamina recovery rate is slow.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Kabuki Warrior</td>
+    <td class="xl271547_D">Magic</td>
+    <td class="xl271547_D">Magic</td>
+    <td class="xl271547_D">
+    <input id="collapsible_kab" class="toggle" type="checkbox">
+<label for="collapsible_kab" class="lbl-toggle" tabindex="0"><b>Flash Powder</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses nearby enemies, making them easier targets (Force-stop effect, enemies take +50% more damage, line Of Sight -90%/ 20sec/AoE).</p></div></div>
+    <input id="collapsible_kab2" class="toggle" type="checkbox">
+<label for="collapsible_kab2" class="lbl-toggle" tabindex="0"><b>Star Dust</b></label><div class="collapsible-content"><div class="content-inner"><p>Prevents enemy rangers' from shooting (20sec/AoE).</p></div></div>
+</td>
+    <td class="xl271547_D">
+    <input id="collapsible_kab3" class="toggle" type="checkbox">
+<label for="collapsible_kab3" class="lbl-toggle" tabindex="0"><b>Entertainer</b></label><div class="collapsible-content"><div class="content-inner"><p>Kabuki can juggle orbs of energy, entertaining peasants and easing their exhaustion (25% stamina recovery/AoE).</p></div></div>
+<input id="collapsible_kab4" class="toggle" type="checkbox">
+<label for="collapsible_kab4" class="lbl-toggle" tabindex="0"><b>Jump Strike</b></label><div class="collapsible-content"><div class="content-inner"><p>Kabuki gains height advantage when he performs his jumping attack.</p></div></div>
+<input id="collapsible_kab5" class="toggle" type="checkbox">
+<label for="collapsible_kab5" class="lbl-toggle" tabindex="0"><b>Acrobatic</b></label><div class="collapsible-content"><div class="content-inner"><p>Kabuki is the quickest unit to mount/dismout a horse.</p></div></div>
+    <input id="collapsible_kab6" class="toggle" type="checkbox">
+<label for="collapsible_kab6" class="lbl-toggle" tabindex="0"><b>Back In Action</b></label><div class="collapsible-content"><div class="content-inner"><p>Kabuki's stamina recovery rate is quick.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D">PK Cannoneer</td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">Explosive</td>
+    <td class="xl271547_D">
+    <input id="collapsible_pk" class="toggle" type="checkbox">
+<label for="collapsible_pk" class="lbl-toggle" tabindex="0"><b>Fragmentation Keg</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing/AoE)</p></div></div>
+<input id="collapsible_pk2" class="toggle" type="checkbox">
+<label for="collapsible_pk2" class="lbl-toggle" tabindex="0"><b>Indirect Fire</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+</td>
+    <td class="xl271547_D">
+    <input id="collapsible_pk3" class="toggle" type="checkbox">
+<label for="collapsible_pk3" class="lbl-toggle" tabindex="0"><b>Purifying Salt</b></label><div class="collapsible-content"><div class="content-inner"><p>PK Cannoneer will salt the ground to ward off bad spirits and all nearby allies' will take half damage from the next attack they recieve.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Samurai</td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">Piercing</td>
+     <td class="xl271547_D">
+    <input id="collapsible_sam" class="toggle" type="checkbox">
+<label for="collapsible_sam" class="lbl-toggle" tabindex="0"><b>Yang Blade</b></label><div class="collapsible-content"><div class="content-inner"><p>Increased Yang generation from attacks. +10% dmg per each Yang of the Clan.</p></div></div>
+<input id="collapsible_sam2" class="toggle" type="checkbox">
+<label for="collapsible_sam2" class="lbl-toggle" tabindex="0"><b>Dragon Skin</b></label><div class="collapsible-content"><div class="content-inner"><p>Samurai will not receive damage from projectiles and AoE based attacks (BGs).</p></div></div>
+</td>
+    <td class="xl271547_D">
+    <input id="collapsible_sam3" class="toggle" type="checkbox">
+<label for="collapsible_sam3" class="lbl-toggle" tabindex="0"><b>Seppuku</b></label><div class="collapsible-content"><div class="content-inner"><p>Samurai will commit honor suicide when defeated, releasing his spirit and damaging all nearby enemies (Explosive/AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">175%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D">Battle Maiden</td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">
+    <input id="collapsible_bm" class="toggle" type="checkbox">
+<label for="collapsible_bm" class="lbl-toggle" tabindex="0"><b>Power Transfer</b></label><div class="collapsible-content"><div class="content-inner"><p>+50% damage increase for nearby allies (Anti-Tower/AoE).</p></div></div>
+</td>
+    <td class="xl271547_D">
+<input id="collapsible_bm2" class="toggle" type="checkbox">
+<label for="collapsible_bm2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Maiden's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D">Guardian</td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D"><input id="collapsible_guard" class="toggle" type="checkbox">
+<label for="collapsible_guard" class="lbl-toggle" tabindex="0"><b>Concussion Smash</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+</td>
+    <td class="xl271547_D">
+    <input id="collapsible_guard2" class="toggle" type="checkbox">
+<label for="collapsible_guard2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Guardian's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D"><b>Otomo</b></td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">
+<input id="collapsible_otomo" class="toggle" type="checkbox">
+<label for="collapsible_otomo" class="lbl-toggle" tabindex="0"><b>Battle Cry</b></label><div class="collapsible-content"><div class="content-inner"><p>+20% Damage increase for nearby allies (AoE).</p></div></div>
+</td>
+    <td class="xl271547_D">
+<input id="collapsible_otomo2" class="toggle" type="checkbox">
+<label for="collapsible_otomo2" class="lbl-toggle" tabindex="0"><b>Battle Leader</b></label><div class="collapsible-content"><div class="content-inner"><p>When Otomo is fighting, nearby allies slowly regain stamina (AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D"><b>Tao</b></td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">
+<input id="collapsible_tao" class="toggle" type="checkbox">
+<label for="collapsible_tao" class="lbl-toggle" tabindex="0"><b>Reversal of Fortune</b></label><div class="collapsible-content"><div class="content-inner"><p>Deals blunt damage to each attacker fighting Tao.</p></div></div>
+</td>
+    <td class="xl271547_D">
+<input id="collapsible_tao2" class="toggle" type="checkbox">
+<label for="collapsible_tao2" class="lbl-toggle" tabindex="0"><b>Monastic Influence</b></label><div class="collapsible-content"><div class="content-inner"><p>When Tao is recruited, the player can recruit two more Monks or Ninjas.</p></div></div>
+<input id="collapsible_tao3" class="toggle" type="checkbox">
+<label for="collapsible_tao3" class="lbl-toggle" tabindex="0"><b>Strong Spirit</b></label><div class="collapsible-content"><div class="content-inner"><p>Tao's regeneration rate is increased and he can heal to full health.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D"><b>Arah</b></td>
+    <td class="xl271547_D">Cutting</td>
+    <td class="xl271547_D">Piercing</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">
+<input id="collapsible_arah" class="toggle" type="checkbox">
+<label for="collapsible_arah" class="lbl-toggle" tabindex="0"><b>Deadly Accuracy</b></label><div class="collapsible-content"><div class="content-inner"><p>Arah's arrows are faster and deadlier than normal arrows.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D"><b>Teppo</b></td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">Explosive</td>
+    <td class="xl271547_D">
+<input id="collapsible_teppo" class="toggle" type="checkbox">
+<label for="collapsible_teppo" class="lbl-toggle" tabindex="0"><b>Magic Negation</b></label><div class="collapsible-content"><div class="content-inner"><p>Prevents all magic from harming Teppo, includes BGs and tower effects, but excludes magic weapons.</p></div></div>
+</td>
+    <td class="xl271547_D">
+<input id="collapsible_teppo2" class="toggle" type="checkbox">
+<label for="collapsible_teppo2" class="lbl-toggle" tabindex="0"><b>Regeneration</b></label><div class="collapsible-content"><div class="content-inner"><p>Teppo can naturally heal to full health and does so slightly faster than normal.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_D"><b>Kazan</b></td>
+    <td class="xl271547_D">Blunt</td>
+    <td class="xl271547_D">Fire</td>
+    <td class="xl271547_D">☯ <b>Flame Breath</b> (Explosive)</td>
+    <td class="xl271547_D">
+    <input id="collapsible_kazan" class="toggle" type="checkbox">
+<label for="collapsible_kazan" class="lbl-toggle" tabindex="0"><b>Fire Wielder</b></label><div class="collapsible-content"><div class="content-inner"><p>Kazan has a huge armor bonus against fire.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">10%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_D"><b>Garrin</b></td>
+    <td class="xl271547_D">Piercing</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">N/A</td>
+    <td class="xl271547_D">
+<input id="collapsible_garrin" class="toggle" type="checkbox">
+<label for="collapsible_garrin" class="lbl-toggle" tabindex="0"><b>Horsemanship</b></label><div class="collapsible-content"><div class="content-inner"><p>Garrin won't fall from horses and deals <b>175%</b> damage to foes on lower footing; however, he only does <b>25%</b> to foes on higher footing.</p></div></div>
+    <input id="collapsible_garrin2" class="toggle" type="checkbox">
+<label for="collapsible_garrin2" class="lbl-toggle" tabindex="0"><b>Heavy Weapon</b></label><div class="collapsible-content"><div class="content-inner"><p>Garrin's stamina recovery rate is very slow.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+   <td class="xl271547_D" style="color:orange"><b>Dragon Watchtower</b></td>
+   <td class="xl271547_D" colspan="10" style="color:white">Stuns enemies around the tower for 6 seconds.</b><br></td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+<td class="xl271547_D" style="color:orange"><b>Dragon Monument</b>
+</td>
+<td class="xl271547_D" colspan="10" style="color:white">Deals <b>Cutting</b>, <b>Piercing</b>, <b>Blunt</b> and <b>Explosive</b> damage in a large area at the cost of <b>3 Yang Points</b> and <b>4 Samurai.</b><br>
+</td>
+</tr>
+<tr>
+<td>
+   <tr class="xl151547"> 
+    <td class="xl281547"><b>Serpent Clan</b></td>
+    <td class="xl281547"><b>Melee</b></td>
+    <td class="xl281547"><b>Missile</b></td>
+    <td class="xl281547"><b>Battle Gears</b></td>
+    <td class="xl281547"><b>Innate Abilities</b></td>
+    <td class="xl281547"><b>Cutting</b></td>
+    <td class="xl281547"><b>Piercing</b></td>
+    <td class="xl281547"><b>Blunt</b></td>
+    <td class="xl281547"><b>Explosive</b></td>
+    <td class="xl281547"><b>Magical</b></td>
+    <td class="xl281547"><b>Fire</b></td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Serpent Peasant</td>
+    <td class="xl271547_S">Piecing</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Swordsman</td>
+    <td class="xl271547_S">Cutting</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_sword" class="toggle" type="checkbox">
+<label for="collapsible_sword" class="lbl-toggle" tabindex="0"><b>Mugging</b></label><div class="collapsible-content"><div class="content-inner"><p>Removes BGs from nearby enemies on attack (AoE).</p></div></div>
+ <input id="collapsible_sword2" class="toggle" type="checkbox">
+<label for="collapsible_sword2" class="lbl-toggle" tabindex="0"><b>Glass Sword</b></label><div class="collapsible-content"><div class="content-inner"><p><em>Instantly kills</em> any non-hero unit, including those on horses.</p></div></div>
+    </td>
+    <td class="xl271547_S">
+<input id="collapsible_sword3" class="toggle" type="checkbox">
+<label for="collapsible_sword3" class="lbl-toggle" tabindex="0"><b>Evasion</b></label><div class="collapsible-content"><div class="content-inner"><p>Projectiles are less likely to hit Swordsman when he is running.</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+  <tr class="xl151547"> 
+    <td class="xl271547_S">Musketeer</td>
+    <td class="xl271547_S">Blunt</td>
+    <td class="xl271547_S">Explosive</td>
+    <td class="xl271547_S">
+<input id="collapsible_musk" class="toggle" type="checkbox">
+<label for="collapsible_musk" class="lbl-toggle" tabindex="0">
+<b>Sniper Scope</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing)</p></div></div>
+<input id="collapsible_musk2" class="toggle" type="checkbox">
+<label for="collapsible_musk2" class="lbl-toggle" tabindex="0">
+<b>Blast Shot</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_musk3" class="toggle" type="checkbox">
+<label for="collapsible_musk3" class="lbl-toggle" tabindex="0">
+<b>Instant Hit</b></label><div class="collapsible-content"><div class="content-inner"><p>Musketeer's missile attacks instantly hit targets and can't be avoided (<i>Blast Shot is not instant hit</i>).</p></div></div>
+    <input id="collapsible_musk4" class="toggle" type="checkbox">
+<label for="collapsible_musk4" class="lbl-toggle" tabindex="0">
+<b>Heavy Weapon</b></label><div class="collapsible-content"><div class="content-inner"><p>Musketeer's stamina recovery rate is slow.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Crossbowman</td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">
+    <input id="collapsible_xbow" class="toggle" type="checkbox">
+<label for="collapsible_xbow" class="lbl-toggle" tabindex="0">
+<b>Weakness Bolt</b></label><div class="collapsible-content"><div class="content-inner"><p>Enemy takes 50% more damage from all attacks for 15 sec</p></div></div>
+</td>
+    <td class="xl261547">
+<input id="collapsible_xbow2" class="toggle" type="checkbox">
+<label for="collapsible_xbow2" class="lbl-toggle" tabindex="0">
+<b>Full Recovery</b></label><div class="collapsible-content"><div class="content-inner"><p>Crossbowman can regenerate health up to 100%</p></div></div>
+<input id="collapsible_xbow2" class="toggle" type="checkbox">
+<label for="collapsible_xbow2" class="lbl-toggle" tabindex="0">
+<b>Expert Scout</b></label><div class="collapsible-content"><div class="content-inner"><p>Crossbowman's speed and stamina recovery rate are very high.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Fan Geisha</td>
+    <td class="xl271547_S">Cutting</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_fgeisha" class="toggle" type="checkbox">
+<label for="collapsible_fgeisha" class="lbl-toggle" tabindex="0">
+<b>Dark Pact</b></label><div class="collapsible-content"><div class="content-inner"><p>Allies receive 25% less damage from all attacks at the cost of 25% HP each and 50% stamina of Fan Geisha (AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_fgeisha2" class="toggle" type="checkbox">
+<label for="collapsible_fgeisha2" class="lbl-toggle" tabindex="0">
+<b>Razor Fans</b></label><div class="collapsible-content"><div class="content-inner"><p>Restores health of Fan Geisha and her nearby allies at the cost of her stamina (AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Cannoneer</td>
+    <td class="xl271547_S">Blunt</td>
+    <td class="xl271547_S">Blunt</td>
+        <td class="xl271547_S">
+<input id="collapsible_can" class="toggle" type="checkbox">
+<label for="collapsible_can" class="lbl-toggle" tabindex="0">
+<b>Mines</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+<input id="collapsible_can2" class="toggle" type="checkbox">
+<label for="collapsible_can2" class="lbl-toggle" tabindex="0">
+<b>Smoke Bomb</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses enemies (Force-stop effect, Damage -50%, Line Of Sight -90% for 15 sec)</p></div></div>
+</td>
+    <td class="xl271547_S">
+    <input id="collapsible_can3" class="toggle" type="checkbox">
+<label for="collapsible_can3" class="lbl-toggle" tabindex="0">
+<b>Pass-through Damage</b></label><div class="collapsible-content"><div class="content-inner"><p>Cannoneer's shots go through enemies and buildings, damaging multiple targets in a row.</p></div></div>
+    <input id="collapsible_can4" class="toggle" type="checkbox">
+<label for="collapsible_can4" class="lbl-toggle" tabindex="0">
+<b>Heavy Weapon</b></label><div class="collapsible-content"><div class="content-inner"><p>Cannoneer's stamina recovery rate is slow.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Raider</td>
+    <td class="xl271547_S">Blunt</td>
+    <td class="xl271547_S">Fire</td>
+    <td class="xl271547_S">☯ <b>Caltrops</b> (Piercing)</td>
+    <td class="xl271547_S">
+<input id="collapsible_raider" class="toggle" type="checkbox">
+<label for="collapsible_raider" class="lbl-toggle" tabindex="0">
+<b>Ambush</b></label><div class="collapsible-content"><div class="content-inner"><p>Raider gets no line-of-sight reduction in forests.</p></div></div>
+<input id="collapsible_raider2" class="toggle" type="checkbox">
+<label for="collapsible_raider2" class="lbl-toggle" tabindex="0">
+<b>Expert Scout</b></label><div class="collapsible-content"><div class="content-inner"><p>Raider's speed and stamina recovery rate are very high.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Bandit</td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">
+<input id="collapsible_bandit" class="toggle" type="checkbox">
+<label for="collapsible_bandit" class="lbl-toggle" tabindex="0">
+<b>Paralysis Darts</b></label><div class="collapsible-content"><div class="content-inner"><p>Paralyzes enemies for 7 seconds.</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_bandit2" class="toggle" type="checkbox">
+<label for="collapsible_bandit2" class="lbl-toggle" tabindex="0">
+<b>Looting</b></label><div class="collapsible-content"><div class="content-inner"><p>Bandit can loot enemy corpses to get rice (fixed 50 rice from 1 corpse).</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Ronin</td>
+    <td class="xl271547_S">Cutting</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_ronin" class="toggle" type="checkbox">
+<label for="collapsible_ronin" class="lbl-toggle" tabindex="0">
+<b>Yin Blades</b></label><div class="collapsible-content"><div class="content-inner"><p>Changes Ronin's damage type to <em>Magical</em> and increases Yin generation from attacks.</p></div></div>
+<input id="collapsible_ronin2" class="toggle" type="checkbox">
+<label for="collapsible_ronin2" class="lbl-toggle" tabindex="0">
+<b>Blood Bond</b></label><div class="collapsible-content"><div class="content-inner"><p>Ronin receives 50% of damage from incoming attacks where as his bonded ally receives 75% of damage dealt to Ronin.</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_ronin3" class="toggle" type="checkbox">
+<label for="collapsible_ronin3" class="lbl-toggle" tabindex="0">
+<b>Cursed Swords</b></label><div class="collapsible-content"><div class="content-inner"><p>After death, Ronin will thrust his swords into the ground. The swords cause nearby allies to do 50% more damage, while nearby enemies are slowed down (AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">175%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S"><b>Necromancer</b></td>
+    <td class="xl271547_S">Magic</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_necro" class="toggle" type="checkbox">
+<label for="collapsible_necro" class="lbl-toggle" tabindex="0">
+<b>Raise the Dead</b></label><div class="collapsible-content"><div class="content-inner"><p>Necromancer raises nearby corpses into zombies at the cost of his stamina (AoE).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Spirit Warrior</td>
+    <td class="xl271547_S">Magic</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_sw" class="toggle" type="checkbox">
+<label for="collapsible_sw" class="lbl-toggle" tabindex="0">
+<b>Floater</b></label><div class="collapsible-content"><div class="content-inner"><p>Spirit Warrior always has height advantage.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Zombie</td>
+    <td class="xl271547_S">Cutting</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_zombie" class="toggle" type="checkbox">
+<label for="collapsible_zombie" class="lbl-toggle" tabindex="0">
+<b>Degeneration</b></label><div class="collapsible-content"><div class="content-inner"><p>Zombie rots alive, losing health all the time.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Enforcer</td>
+    <td class="xl271547_S">Blunt</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_enforcer" class="toggle" type="checkbox">
+<label for="collapsible_enforcer" class="lbl-toggle" tabindex="0">
+<b>Low Blow</b></label><div class="collapsible-content"><div class="content-inner"><p>Slows down an enemy unit by 30%.</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_enforcer2" class="toggle" type="checkbox">
+<label for="collapsible_enforcer2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Enforcer's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S">Witch</td>
+    <td class="xl271547_S">Explosive</td>
+    <td class="xl271547_S">Explosive</td>
+    <td class="xl271547_S">
+<input id="collapsible_witch" class="toggle" type="checkbox">
+<label for="collapsible_witch" class="lbl-toggle" tabindex="0"><b>Vampiric Gaze</b></label><div class="collapsible-content"><div class="content-inner"><p>Nearby allies gain 10% of their total health back per second (Anti-Tower/AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_witch2" class="toggle" type="checkbox">
+<label for="collapsible_witch2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Witch's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S">Demoness</td>
+    <td class="xl271547_S">Magic</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+    <input id="collapsible_demon" class="toggle" type="checkbox">
+<label for="collapsible_demon" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Demoness' attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547_S" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S"><b>Shinja</b></td>
+    <td class="xl271547_S">Cutting</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_shinja" class="toggle" type="checkbox">
+<label for="collapsible_shinja" class="lbl-toggle" tabindex="0"><b>Intimidation</b></label><div class="collapsible-content"><div class="content-inner"><p>Nearby enemies' damage reduced by 50% (AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_shinja2" class="toggle" type="checkbox">
+<label for="collapsible_shinja2" class="lbl-toggle" tabindex="0"><b>Jump Strike</b></label><div class="collapsible-content"><div class="content-inner"><p>Shinja gains height advantage when he performs his jumping attack.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S"><b>Utara</b></td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_utara" class="toggle" type="checkbox">
+<label for="collapsible_utara" class="lbl-toggle" tabindex="0"><b>Song Of Sorrow</b></label><div class="collapsible-content"><div class="content-inner"><p>(Magical damage/AoE)</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_utara2" class="toggle" type="checkbox">
+<label for="collapsible_utara2" class="lbl-toggle" tabindex="0"><b>Pleasure and Pain</b></label><div class="collapsible-content"><div class="content-inner"><p>When Utara takes damage, nearby enemies get momentarily stunned.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S"><b>Taro</b></td>
+    <td class="xl271547_S">Magic</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_taro" class="toggle" type="checkbox">
+<label for="collapsible_taro" class="lbl-toggle" tabindex="0"><b>Insidious Hex</b></label><div class="collapsible-content"><div class="content-inner"><p>Nearby enemies' take 100% more damage from magical attacks (10 sec/AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_taro2" class="toggle" type="checkbox">
+<label for="collapsible_taro2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Taro's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_S"><b>Vetkin</b></td>
+    <td class="xl271547_S">Piercing</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_vet" class="toggle" type="checkbox">
+<label for="collapsible_vet" class="lbl-toggle" tabindex="0"><b>Bravado</b></label><div class="collapsible-content"><div class="content-inner"><p>All nearby enemies have their stamina reduced to 0 (AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_vet2" class="toggle" type="checkbox">
+<label for="collapsible_vet2" class="lbl-toggle" tabindex="0"><b>Athletic</b></label><div class="collapsible-content"><div class="content-inner"><p>Vetkin runs very quickly and doesn't lose stamina when running, he also recovers it very quickly.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S"><b>Budo</b></td>
+    <td class="xl271547_S">Blunt</td>
+    <td class="xl271547_S">N/A</td>
+    <td class="xl271547_S">
+<input id="collapsible_budo" class="toggle" type="checkbox">
+<label for="collapsible_budo" class="lbl-toggle" tabindex="0"><b>Slave Driver</b></label><div class="collapsible-content"><div class="content-inner"><p>Budo's whip scares all nearby Serpent peasants', speeding them up by 20% (AoE).</p></div></div>
+</td>
+    <td class="xl271547_S">
+<input id="collapsible_budo2" class="toggle" type="checkbox">
+<label for="collapsible_budo2" class="lbl-toggle" tabindex="0"><b>Massive Endurance</b></label><div class="collapsible-content"><div class="content-inner"><p>Budo has plenty of endurance from working too many hours into peasant-beating routines on the Serpent rice fields.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_S" style="color:#b20000"><b>Serpent Watchtower</b></td>
+    <td class="xl271547_S" colspan="10" style="color:white;text-align:center">Confuses all enemies around the watchtower (Force-stop effect, Armor -50%, Line Of Sight -90% for 15 sec).</b><br></td>
+  </tr>
+
+
+
+<tr>
+<td>
+   <tr class="xl151547"> 
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Wolf Clan</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Melee</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Missile</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Battle Gears</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Innate Abilities</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Cutting</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Piercing</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Blunt</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Explosive</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Magical</b></td>
+    <td class="xl281547" style="background:#004c00;border:.5pt solid #000"><b>Fire</b></td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Wolf Peasant</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_wpea" class="toggle" type="checkbox">
+<label for="collapsible_wpea" class="lbl-toggle" tabindex="0"><b>Hard Worker</b></label><div class="collapsible-content"><div class="content-inner"><p>Wolf Peasant gathers rice faster than other clans' peasants.</p></div></div>
+<input id="collapsible_wpea2" class="toggle" type="checkbox">
+<label for="collapsible_wpea2" class="lbl-toggle" tabindex="0"><b>Strong Hand</b></label><div class="collapsible-content"><div class="content-inner"><p>Wolf Peasant hits harder than other clans' peasants.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Hurler</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">
+<input id="collapsible_hurler" class="toggle" type="checkbox">
+<label for="collapsible_hurler" class="lbl-toggle" tabindex="0"><b>Lava Rock</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_hurler2" class="toggle" type="checkbox">
+<label for="collapsible_hurler2" class="lbl-toggle" tabindex="0"><b>Pass-through Damage</b></label><div class="collapsible-content"><div class="content-inner"><p>Hurler's shots go through enemies and buildings, damaging multiple targets in a row.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Mauler</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">☯ <b>Wrecking Ball</b> (Blunt/AoE)</td>
+    <td class="xl271547_W">
+<input id="collapsible_mauler" class="toggle" type="checkbox">
+<label for="collapsible_mauler" class="lbl-toggle" tabindex="0"><b>Jump Strike</b></label><div class="collapsible-content"><div class="content-inner"><p>Mauler gains height advantage when he performs his jumping attack.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Brawler</td>
+    <td class="xl271547_W">Cutting</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_brawler" class="toggle" type="checkbox">
+<label for="collapsible_brawler" class="lbl-toggle" tabindex="0"><b>Zen-Punch</b></label><div class="collapsible-content"><div class="content-inner"><p>Instantly kills any hero or deals a portion of magical damage to a unit.</p></div></div>
+</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Pack Master</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_pack" class="toggle" type="checkbox">
+<label for="collapsible_pack" class="lbl-toggle" tabindex="0"><b>Master Of The Pack</b></label><div class="collapsible-content"><div class="content-inner"><p>Pack Master can take up to 3 wolves from the Wolves Den.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Pack Wolf</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Druidess</td>
+    <td class="xl271547_W">Magic</td>
+    <td class="xl271547_W">Magic</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Ballistaman</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">
+<input id="collapsible_ballista" class="toggle" type="checkbox">
+<label for="collapsible_ballista" class="lbl-toggle" tabindex="0"><b>Totem</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases all nearby allies damage by 50%, slows down all nearby enemies by 25% (AoE).</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_ballista2" class="toggle" type="checkbox">
+<label for="collapsible_ballista2" class="lbl-toggle" tabindex="0"><b>Hard Hitter</b></label><div class="collapsible-content"><div class="content-inner"><p>Ballistaman's bolts deal a lot of damage.</p></div></div>
+<input id="collapsible_ballista3" class="toggle" type="checkbox">
+<label for="collapsible_ballista3" class="lbl-toggle" tabindex="0"><b>Heavy Weapon</b></label><div class="collapsible-content"><div class="content-inner"><p>Ballistaman recovers stamina very slowly.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Pitch Slinger</td>
+    <td class="xl271547_W">Fire</td>
+    <td class="xl271547_W">Explosive</td>
+    <td class="xl271547_W">
+<input id="collapsible_pitch" class="toggle" type="checkbox">
+<label for="collapsible_pitch" class="lbl-toggle" tabindex="0"><b>Scorched Earth</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_pitch2" class="toggle" type="checkbox">
+<label for="collapsible_pitch2" class="lbl-toggle" tabindex="0"><b>Fly-over Damage</b></label><div class="collapsible-content"><div class="content-inner"><p>Slinger's shots damage all enemies and buildings between him and his target.</p></div></div>
+<input id="collapsible_pitch3" class="toggle" type="checkbox">
+<label for="collapsible_pitch3" class="lbl-toggle" tabindex="0"><b>Siege unit</b></label><div class="collapsible-content"><div class="content-inner"><p>Slingers demolish structures and set them on fire with incredible potency.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Sledger</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_sledger" class="toggle" type="checkbox">
+<label for="collapsible_sledger" class="lbl-toggle" tabindex="0"><b>Stun Slam</b></label><div class="collapsible-content"><div class="content-inner"><p>Stuns nearby enemies (sec/AoE)</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_sledger2" class="toggle" type="checkbox">
+<label for="collapsible_sledger2" class="lbl-toggle" tabindex="0"><b>Demolisher</b></label><div class="collapsible-content"><div class="content-inner"><p>Sledgers demolish structures with incredible potency.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Berserker</td>
+    <td class="xl271547_W">Cutting</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_zerk" class="toggle" type="checkbox">
+<label for="collapsible_zerk" class="lbl-toggle" tabindex="0"><b>Back In Action</b></label><div class="collapsible-content"><div class="content-inner"><p>Berserker recovers stamina very quickly when idling.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+  <tr>
+     <tr class="xl161547"> 
+    <td class="xl271547_W">Werewolf</td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_ww0" class="toggle" type="checkbox">
+<label for="collapsible_ww0" class="lbl-toggle" tabindex="0"><b>Wolf Bite</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing)</p></div></div></td>
+    <td class="xl271547_W">
+<input id="collapsible_ww" class="toggle" type="checkbox">
+<label for="collapsible_ww" class="lbl-toggle" tabindex="0"><b>Natural Hunter</b></label><div class="collapsible-content"><div class="content-inner"><p>Werewolf runs incredibly fast and recovers stamina very quickly when idling.</p></div></div>
+<input id="collapsible_ww2" class="toggle" type="checkbox">
+<label for="collapsible_ww2" class="lbl-toggle" tabindex="0"><b>Alpha Wolf</b></label><div class="collapsible-content"><div class="content-inner"><p>Wild (or hostless) wolves will regard the Werewolf as the Alpha Wolf and will follow him.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W">Digger</td>
+    <td class="xl271547_W">Cutting</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_digger" class="toggle" type="checkbox">
+<label for="collapsible_digger" class="lbl-toggle" tabindex="0"><b>Back In Action</b></label><div class="collapsible-content"><div class="content-inner"><p>Digger recovers stamina very quickly when idling.</p></div></div>
+<input id="collapsible_digger2" class="toggle" type="checkbox">
+<label for="collapsible_digger2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Digger's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W">Dryad</td>
+    <td class="xl271547_W">Magic</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_dryad" class="toggle" type="checkbox">
+<label for="collapsible_dryad" class="lbl-toggle" tabindex="0"><b>Sapping Ritual</b></label><div class="collapsible-content"><div class="content-inner"><p>Nearby allies receive 50% less damage from all attacks (Anti-Tower/AoE).</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_dryad2" class="toggle" type="checkbox">
+<label for="collapsible_dryad2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Dryad's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W"><b>Grayback</b></td>
+    <td class="xl271547_W">Piercing</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_gray" class="toggle" type="checkbox">
+<label for="collapsible_gray" class="lbl-toggle" tabindex="0"><b>Wolf Howl</b></label><div class="collapsible-content"><div class="content-inner"><p>Nearby allies deal 50% more damage (AoE).</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_gray2" class="toggle" type="checkbox">
+<label for="collapsible_gray2" class="lbl-toggle" tabindex="0"><b>Sturdy</b></label><div class="collapsible-content"><div class="content-inner"><p>Grayback has a lot of health.</p></div></div>
+<input id="collapsible_gray3" class="toggle" type="checkbox">
+<label for="collapsible_gray3" class="lbl-toggle" tabindex="0"><b>Hard Hitter</b></label><div class="collapsible-content"><div class="content-inner"><p>Grayback deals a lot of damage and destroys buildings effectively.</p></div></div>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W"><b>Longtooth</b></td>
+    <td class="xl271547_W">Magic</td>
+    <td class="xl271547_W">Magic</td>
+    <td class="xl271547_W">
+<input id="collapsible_tooth" class="toggle" type="checkbox">
+<label for="collapsible_tooth" class="lbl-toggle" tabindex="0"><b>Razor-Edge Boomerang</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing/Pass-through)</p></div></div>
+</td>
+    <td class="xl271547_W"><input id="collapsible_tooth2" class="toggle" type="checkbox">
+<label for="collapsible_tooth2" class="lbl-toggle" tabindex="0"><b>Climber</b></label><div class="collapsible-content"><div class="content-inner"><p>Longtooth doesn't suffer the speed penalty when going uphill.</p></div></div>
+<input id="collapsible_tooth3" class="toggle" type="checkbox">
+<label for="collapsible_tooth3" class="lbl-toggle" tabindex="0"><b>Keen Vision</b></label><div class="collapsible-content"><div class="content-inner"><p>Longtooth's LOS in forests is reduced only by 25%.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W"><b>Gaihla</b></td>
+    <td class="xl271547_W">Cutting</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_gaihla" class="toggle" type="checkbox">
+<label for="collapsible_gaihla" class="lbl-toggle" tabindex="0"><b>Chant of Life</b></label><div class="collapsible-content"><div class="content-inner"><p>Instantly heals nearby allies to full health (AoE).</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_gaihla2" class="toggle" type="checkbox">
+<label for="collapsible_gaihla2" class="lbl-toggle" tabindex="0"><b>Forest Friend</b></label><div class="collapsible-content"><div class="content-inner"><p>Gaihla's speed and LOS are not reduced when in forests</p></div></div>
+<input id="collapsible_gaihla3" class="toggle" type="checkbox">
+<label for="collapsible_gaihla3" class="lbl-toggle" tabindex="0"><b>Crop Blessing</b></label><div class="collapsible-content"><div class="content-inner"><p>Gaihla will throw flowers around to make rice regrow quicker.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W"><b>Wildeye</b></td>
+    <td class="xl271547_W">Cutting</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_wild" class="toggle" type="checkbox">
+<label for="collapsible_wild" class="lbl-toggle" tabindex="0"><b>Master Of The Pack</b></label><div class="collapsible-content"><div class="content-inner"><p>Wildeye can take up to 3 wolves from the Wolves Den (+ Summon 3 Spirit Wolves).</p></div></div>
+<input id="collapsible_wild2" class="toggle" type="checkbox">
+<label for="collapsible_wild2" class="lbl-toggle" tabindex="0"><b>Grant Wolf</b></label><div class="collapsible-content"><div class="content-inner"><p>Wildeye can order any of his wolves to follow clansmembers.</p></div></div>
+<input id="collapsible_wild3" class="toggle" type="checkbox">
+<label for="collapsible_wild3" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Wildeye's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W"><b>The Shale Lord</td>
+    <td class="xl271547_W">Blunt</td>
+    <td class="xl271547_W">N/A</td>
+    <td class="xl271547_W">
+<input id="collapsible_shale" class="toggle" type="checkbox">
+<label for="collapsible_shale" class="lbl-toggle" tabindex="0"><b>Armored Friend</b></label><div class="collapsible-content"><div class="content-inner"><p>Equip Wolf units with <b>Shale Armor</b> at the cost of health.</p></div></div>
+</td>
+    <td class="xl271547_W">
+<input id="collapsible_shale2" class="toggle" type="checkbox">
+<label for="collapsible_shale2" class="lbl-toggle" tabindex="0"><b>Failed Experiment</b></label><div class="collapsible-content"><div class="content-inner"><p>Shale Lord regenerates health very slowly and greatly suffers from explosive and magical damage.</p></div></div>
+<input id="collapsible_shale3" class="toggle" type="checkbox">
+<label for="collapsible_shale3" class="lbl-toggle" tabindex="0"><b>Giant</b></label><div class="collapsible-content"><div class="content-inner"><p>Shale Lord destroys buildings with great potency and always has height advantage.</p></div></div>
+<input id="collapsible_shale4" class="toggle" type="checkbox">
+<label for="collapsible_shale4" class="lbl-toggle" tabindex="0"><b>Battle Lust</b></label><div class="collapsible-content"><div class="content-inner"><p>Shale Lord slowly regains stamina when fighting.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W"><b>Wolf Tower</b></td>
+    <td class="xl271547_W" colspan="10" style="text-align:center">Slows down all enemies around the watchtower by.</b><br></td>
+  </tr>
+    <tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W"><b>Advanced Metabolism</b></td>
+    <td class="xl271547_W" colspan="10">All Wolf units heal to full health and do so slightly faster than normal. Wolf heroes recover health even faster (Shale Lord is an exception).<br></td>
+  </tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_W"><b>Shale Armor</b></td>
+    <td class="xl271547_W" colspan="10">All Wolf units can obtain Shale Armor which acts as a Battle Gear. Units wearing that armor will take 50% less <b>Magical</b> and <b>Explosive</b> damage types, as well as 25% less damage from all other damage types.<br></td>
+  </tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_W"><b>Friends Of The Wild</b></td>
+    <td class="xl271547_W" colspan="10" style="text-align:center">Wolf Clan units are not attacked by wild wolves (wolf units also won't attack enemy pack wolves (unless forced to), but it's a <b>game bug</b>). <b>Berserker</b>, <b>Werewolf</b> and Hero units can take up to 2 wolves from the Wolves Den (Wildeye & Pack Master are exceptions).<br><br>Tamed wolves can be ordered to attack enemies or objects without their hosts (through <b>force attack</b>).<br></td>
+  </tr>
+
+<tr>
+<td>
+   <tr class="xl161547" style="background:#260026"> 
+    <td class="xl281547" style="background:#4c004c"><b>Lotus Clan</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Melee</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Missile</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Battle Gears</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Innate Abilities</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Cutting</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Piercing</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Blunt</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Explosive</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Magical</b></td>
+    <td class="xl281547" style="background:#4c004c"><b>Fire</b></td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Staff Adept</td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_staff" class="toggle" type="checkbox">
+<label for="collapsible_staff" class="lbl-toggle" tabindex="0"><b>Dark Canopy</b></label><div class="collapsible-content"><div class="content-inner"><p>Staff Adept completely protects nearby allies from projectiles and AoE based attacks (AoE).</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_staff2" class="toggle" type="checkbox">
+<label for="collapsible_staff2" class="lbl-toggle" tabindex="0"><b>Whirling Staff</b></label><div class="collapsible-content"><div class="content-inner"><p>Does area effect damage when engaging multiple units in melee combat. (working, but almost unnoticeable).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Blade Acolyte</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_blade" class="toggle" type="checkbox">
+<label for="collapsible_blade" class="lbl-toggle" tabindex="0"><b>Inner Strength</b></label><div class="collapsible-content"><div class="content-inner"><p>Restores 25% of Acolyte's health.</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_blade2" class="toggle" type="checkbox">
+<label for="collapsible_blade2" class="lbl-toggle" tabindex="0"><b>Blade Sharpening</b></label><div class="collapsible-content"><div class="content-inner"><p>When idling, Acolyte will sharpen his blades, getting a 60% damage increase for his next attack.</p></div></div>
+<input id="collapsible_blade3" class="toggle" type="checkbox">
+<label for="collapsible_blade3" class="lbl-toggle" tabindex="0"><b>Spinning Attack</b></label><div class="collapsible-content"><div class="content-inner"><p>Does area effect damage when engaging multiple units in melee combat (working, but almost unnoticeable).</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Leaf Disciple</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_leaf" class="toggle" type="checkbox">
+<label for="collapsible_leaf" class="lbl-toggle" tabindex="0"><b>Melee Counterstrike</b></label><div class="collapsible-content"><div class="content-inner"><p>Leaf Disciple's attackers take magical damage in return for each of their attacks.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Channeler</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_raven" class="toggle" type="checkbox">
+<label for="collapsible_raven" class="lbl-toggle" tabindex="0"><b>Raven Tamer</b></label><div class="collapsible-content"><div class="content-inner"><p>Channeler can either use her ravens' lifeforce to heal allies or directly order them to strike her enemies. More ravens - more damage.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Brother Sehk</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Brother Lythis</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Brother Tausil</td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Unclean One</td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">
+<input id="collapsible_unclean" class="toggle" type="checkbox">
+<label for="collapsible_unclean" class="lbl-toggle" tabindex="0"><b>Death Sentry</b></label><div class="collapsible-content"><div class="content-inner"><p>(Magical/AoE)</p></div></div>
+<input id="collapsible_unclean2" class="toggle" type="checkbox">
+<label for="collapsible_unclean2" class="lbl-toggle" tabindex="0"><b>Spreading Goo</b></label><div class="collapsible-content"><div class="content-inner"><p>Slows enemies down by 75% (AoE).</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_unclean3" class="toggle" type="checkbox">
+<label for="collapsible_unclean3" class="lbl-toggle" tabindex="0"><b>Corruption</b></label><div class="collapsible-content"><div class="content-inner"><p>Unclean One quickly loses stamina when running.</p></div></div>
+<input id="collapsible_unclean4" class="toggle" type="checkbox">
+<label for="collapsible_unclean4" class="lbl-toggle" tabindex="0"><b>Darkness</b></label><div class="collapsible-content"><div class="content-inner"><p>Stops nearby enemies' and decreases their vision by 90%.</p></div></div>
+<input id="collapsible_unclean5" class="toggle" type="checkbox">
+<label for="collapsible_unclean5" class="lbl-toggle" tabindex="0"><b>Corrosive Goo</b></label><div class="collapsible-content"><div class="content-inner"><p>Unclean One's attacks are very effective against buildings.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Diseased One</td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+    <input id="collapsible_diseased" class="toggle" type="checkbox">
+<label for="collapsible_diseased" class="lbl-toggle" tabindex="0"><b>Death Wail</b></label><div class="collapsible-content"><div class="content-inner"><p>Drains nearby enemies of all stamina and dismounts enemy horsemen.</p></div></div>
+ <input id="collapsible_diseased2" class="toggle" type="checkbox">
+<label for="collapsible_diseased2" class="lbl-toggle" tabindex="0"><b>Projectile Vomit</b></label><div class="collapsible-content"><div class="content-inner"><p>(Magical/AoE)</p></div></div>
+    </td>
+    <td class="xl271547_L">
+    <input id="collapsible_diseased3" class="toggle" type="checkbox">
+<label for="collapsible_diseased3" class="lbl-toggle" tabindex="0"><b>Corruption</b></label><div class="collapsible-content"><div class="content-inner"><p>Diseased One quickly loses stamina when running.</p></div></div>
+    <input id="collapsible_diseased4" class="toggle" type="checkbox">
+<label for="collapsible_diseased4" class="lbl-toggle" tabindex="0"><b>Rotting Decay</b></label><div class="collapsible-content"><div class="content-inner"><p>After death, Diseased One leaves behind an acidic puddle that will damage any enemy units that walk on it (20 sec/Magical/AoE).</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Infested One</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L"><input id="collapsible_infested" class="toggle" type="checkbox">
+<label for="collapsible_infested" class="lbl-toggle" tabindex="0"><b>Rebirth</b></label><div class="collapsible-content"><div class="content-inner"><p>Infested One is automatically ressurected after he dies.</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_infested2" class="toggle" type="checkbox">
+<label for="collapsible_infested2" class="lbl-toggle" tabindex="0"><b>Corruption</b></label><div class="collapsible-content"><div class="content-inner"><p>Infested One quickly loses stamina when running.</p></div></div>
+<input id="collapsible_infested3" class="toggle" type="checkbox">
+<label for="collapsible_infested3" class="lbl-toggle" tabindex="0"><b>Eruption</b></label><div class="collapsible-content"><div class="content-inner"><p>After death, Infested One explodes in a damaging spray of maggots, unless he is reborn (Piercing).</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+  <tr class="xl151547"> 
+    <td class="xl271547_L">Warlock</td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547_L">
+<input id="collapsible_warlock" class="toggle" type="checkbox">
+<label for="collapsible_warlock" class="lbl-toggle" tabindex="0"><b>Soul Chill</b></label><div class="collapsible-content"><div class="content-inner"><p>(Cutting)</p></div></div>
+<input id="collapsible_warlock1" class="toggle" type="checkbox">
+<label for="collapsible_warlock1" class="lbl-toggle" tabindex="0"><b>Life Siphon</b></label><div class="collapsible-content"><div class="content-inner"><p>Restores 60% of Warlock's health at the cost of ally's health.</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_warlock2" class="toggle" type="checkbox">
+<label for="collapsible_warlock2" class="lbl-toggle" tabindex="0"><b>Soul Lick</b></label><div class="collapsible-content"><div class="content-inner"><p>Enemies attacking Warlock in melee get their stamina burnt in return for each of their hits.</p></div></div>
+<input id="collapsible_warlock3" class="toggle" type="checkbox">
+<label for="collapsible_warlock3" class="lbl-toggle" tabindex="0"><b>Regeneration</b></label><div class="collapsible-content"><div class="content-inner"><p>The unit can naturally heal to full health and does so slightly faster than normal.</p></div></div>
+<input id="collapsible_warlock4" class="toggle" type="checkbox">
+<label for="collapsible_warlock4" class="lbl-toggle" tabindex="0"><b>Floater</b></label><div class="collapsible-content"><div class="content-inner"><p>Warlock always has height advantage.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Master Warlock</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547_L">
+<input id="collapsible_mwarlock" class="toggle" type="checkbox">
+<label for="collapsible_mwarlock" class="lbl-toggle" tabindex="0"><b>Soul Thresher</b></label><div class="collapsible-content"><div class="content-inner"><p>(PassThrough/Magic)</p></div></div>
+<input id="collapsible_mwarlock2" class="toggle" type="checkbox">
+<label for="collapsible_mwarlock2" class="lbl-toggle" tabindex="0"><b>Unlife</b></label><div class="collapsible-content"><div class="content-inner"><p>Ressurect dead allies nearby with 50% Health & Stamina (No BGs).</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_mwarlock3" class="toggle" type="checkbox">
+<label for="collapsible_mwarlock3" class="lbl-toggle" tabindex="0"><b>Floater</b></label><div class="collapsible-content"><div class="content-inner"><p>Master Warlock always has height advantage.</p></div></div>
+    </td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Overseer</td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_seer" class="toggle" type="checkbox">
+<label for="collapsible_seer" class="lbl-toggle" tabindex="0"><b>Tower Corruption</b></label><div class="collapsible-content"><div class="content-inner"><p>(Magical/AoE/Anti-Tower)</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_seer2" class="toggle" type="checkbox">
+<label for="collapsible_seer2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Overseer's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Reaper</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_reaper" class="toggle" type="checkbox">
+<label for="collapsible_reaper" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Reaper's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">175%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L"><b>Zymeth<b></td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547_L">
+<input id="collapsible_zymeth" class="toggle" type="checkbox">
+<label for="collapsible_zymeth" class="lbl-toggle" tabindex="0"><b>Heavy Rain</b></label><div class="collapsible-content"><div class="content-inner"><p>Zymeth controls the weather to make it either rain or snow (winter maps).</p></div></div>
+    </td>
+    <td class="xl271547_L">
+<input id="collapsible_zymeth2" class="toggle" type="checkbox">
+<label for="collapsible_zymeth2" class="lbl-toggle" tabindex="0"><b>Storm Master</b></label><div class="collapsible-content"><div class="content-inner"><p>When it rains, Zymeth will unleash lightning strikes on his enemies (Magical/Explosive).</p></div></div>
+<input id="collapsible_zymeth3" class="toggle" type="checkbox">
+<label for="collapsible_zymeth3" class="lbl-toggle" tabindex="0"><b>Floater</b></label><div class="collapsible-content"><div class="content-inner"><p>Zymeth always has height advantage.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547">
+    <td class="xl271547_L"><b>Yvaine</b></td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">
+<input id="collapsible_yvaine" class="toggle" type="checkbox">
+<label for="collapsible_yvaine" class="lbl-toggle" tabindex="0"><b>Ice Prison</b></label><div class="collapsible-content"><div class="content-inner"><p>Stops nearby enemies and drains their health (NoDamageType/AoE/8 sec).</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_yvaine2" class="toggle" type="checkbox">
+<label for="collapsible_yvaine2" class="lbl-toggle" tabindex="0"><b>Developer's oversight</b></label><div class="collapsible-content"><div class="content-inner"><p>Yvaine's attack damage is neither reduced nor increased by height advantages.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L"><b>Koril</b></td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_koril" class="toggle" type="checkbox">
+<label for="collapsible_koril" class="lbl-toggle" tabindex="0"><b>Evasion</b></label><div class="collapsible-content"><div class="content-inner"><p>Koril warps space around him making it so projectiles will almost always miss.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl161547">
+    <td class="xl271547_L"><b>Issyl</b></td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">
+<input id="collapsible_issyl" class="toggle" type="checkbox">
+<label for="collapsible_issyl" class="lbl-toggle" tabindex="0"><b>Haste</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases overall speed of nearby allies by 40% and their health/stamina regeneration rate by 100% (AoE/15 sec).</p></div></div>
+</td>
+    <td class="xl271547_L">
+<input id="collapsible_issyl2" class="toggle" type="checkbox">
+<label for="collapsible_issyl2" class="lbl-toggle" tabindex="0"><b>Rapid regeneration</b></label><div class="collapsible-content"><div class="content-inner"><p>Issyl regenerates health twice as fast and always up to 100%.</p></div></div>
+</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">200%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L"><b>Soban</b></td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+
+
+
+<tr>
+<td><br><td>
+   <tr class="xl151547"> 
+    <td class="xl281547">Miscellaneous</td>
+    <td class="xl281547">Melee</td>
+    <td class="xl281547">Missile</td>
+    <td class="xl281547">Battle Gears</td>
+    <td class="xl281547">Innate Abilities</td>
+    <td class="xl281547">Cutting</td>
+    <td class="xl281547">Piercing</td>
+    <td class="xl281547">Blunt</td>
+    <td class="xl281547">Explosive</td>
+    <td class="xl281547">Magical</td>
+    <td class="xl281547">Fire</td>
+</tr>
+<tr>
+  <tr class="xl151547"> 
+    <td class="xl271547_L">Wild Wolf</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+   <tr>
+  <tr class="xl151547"> 
+    <td class="xl271547_L">Horse</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+  </tr>
+ <tr>
+  <tr class="xl161547"> 
+    <td class="xl271547_L">Monk</td>
+    <td class="xl271547_L">Blunt</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+  </tr>
+  <tr>
+  <tr class="xl161547"> 
+    <td class="xl271547_L">Ninja</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Golem</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Shambler</td>
+    <td class="xl271547_L">Magic</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+    <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Spirit Wolf</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+</tr>
+<tr>
+   <tr class="xl151547"> 
+    <td class="xl271547_L">Kenji (First Form-SP)</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Kenji 2 (Second Form-SP)</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Kenji 3 (Third Form-SP)</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Kenji (One With The Dragon-SP)</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+<tr>
+   <tr class="xl161547"> 
+    <td class="xl271547_L">Zymeth (No Corruption-SP)</td>
+    <td class="xl271547_L">Cutting</td>
+    <td class="xl271547_L">Explosive</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
+    <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
+</tr>
+  <tr>
+  <tr class="xl151547"> 
+    <td class="xl271547_L">Nightvol(SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+<tr>
+  <tr class="xl161547"> 
+    <td class="xl271547_L">Hordeling(SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+<tr>
+    <tr class="xl161547"> 
+    <td class="xl271547_L">Grayback (Slave-SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+  <tr>
+    <tr class="xl161547"> 
+    <td class="xl271547_L">Grayback (End Game-SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+  <tr>
+    <tr class="xl161547"> 
+    <td class="xl271547_L">Longtooth (Slave-SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+    <tr>
+    <tr class="xl161547"> 
+    <td class="xl271547_L">Yvaine (Ungodly Power-SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+<tr>
+  <tr class="xl161547"> 
+    <td class="xl271547_L">Shale Spider(SP)</td>
+    <td class="xl271547_L">Piercing</td>
+    <td class="xl271547_L">N/A</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+    <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+
+
