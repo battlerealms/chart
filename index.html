@@ -702,8 +702,21 @@ line-height: 1.5;
 text-shadow: 0 0 1px black, 0 0 10px silver;
 cursor: url(https://i.imgur.com/ZbVhsno.png), auto;
 }
+
 </style>
 </head>
+<script>
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
+</script>
 
 <table cellspacing="2" width="1280" align="center">
 
@@ -876,7 +889,8 @@ Wolf peasants will always feed horses to their wolves.
 <tr>
    <tr class="xl161547"> 
     <td class="xl271547_D">
- <a href="https://battlerealms.fandom.com/wiki/Spearman" class="dunitui"><img src="https://i.imgur.com/pM8APGA.jpg"><div class="dunitext">Spearman</div></a>
+<a href="https://battlerealms.fandom.com/wiki/Spearman" class="dunitui"><img src="https://i.imgur.com/pM8APGA.jpg" onmouseover="PlaySound('SpearFX')" onmouseout="StopSound('SpearFX')"><div class="dunitext">Spearman</div></a>
+<audio id='SpearFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/4/44/Dragon_1_0010.ogg'/>
 </div>
 </td>
     <td class="xl271547_D">Piercing</td>
@@ -926,8 +940,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
      <a href="https://battlerealms.fandom.com/wiki/Archer" class="dunitui">
-  <img src="https://i.imgur.com/yqZNpKQ.jpg">
+<img src="https://i.imgur.com/yqZNpKQ.jpg" onmouseover="PlaySound('ArcherFX')" onmouseout="StopSound('ArcherFX')">
   <div class="dunitext">Archer</div></a>
+  <audio id='ArcherFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/6/6f/Archer_0031a.ogg'/>
   </td>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">Piercing</td>
@@ -960,8 +975,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547">
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Chemist" class="dunitui">
-    <img src="https://i.imgur.com/QmzJpFr.jpg">
+    <img src="https://i.imgur.com/QmzJpFr.jpg" onmouseover="PlaySound('ChemFX')" onmouseout="StopSound('ChemFX')">
     <div class="dunitext">Chemist</div></a>
+    <audio id='ChemFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/b/b3/Dragon_3_0010.ogg'/>
 </td>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">Explosive</td>
@@ -989,8 +1005,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Geisha" class="dunitui">
-    <img src="https://i.imgur.com/XQx4mUb.jpg">
+    <img src="https://i.imgur.com/XQx4mUb.jpg"onmouseover="PlaySound('GeishaFX')" onmouseout="StopSound('GeishaFX')">
     <div class="dunitext">Geisha</div></a>
+        <audio id='GeishaFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/9/92/Dragon_7_0000.ogg'/>
 </td>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D"><font style="color:lightgreen"><b>Heal<b></font></td>
@@ -1016,8 +1033,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Horse" class="dunitui">
-    <img src="https://i.imgur.com/7qBmT9J.jpg">
+    <img src="https://i.imgur.com/7qBmT9J.jpg"onmouseover="PlaySound('HorseFX')" onmouseout="StopSound('HorseFX')">
     <div class="dunitext">Dragon Horse</div></a>
+<audio id='HorseFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/b/b7/Horse_Snort_4.ogg'/>
 </td>
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D">N/A</td>
@@ -1040,8 +1058,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Powder_Keg_Cannoneer" class="dunitui">
-    <img src="https://i.imgur.com/HrzubGQ.jpg">
+    <img src="https://i.imgur.com/HrzubGQ.jpg"onmouseover="PlaySound('PkFX')" onmouseout="StopSound('PkFX')">
     <div class="dunitext">Powder Keg Cannoneer</div></a>
+<audio id='PkFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/3/3b/Dragon_4_0040a.ogg'/>
 </td>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">Explosive</td>
@@ -1072,8 +1091,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Dragon_Warrior" class="dunitui">
-    <img src="https://i.imgur.com/AMScjs2.jpg">
+    <img src="https://i.imgur.com/AMScjs2.jpg"onmouseover="PlaySound('DwFX')" onmouseout="StopSound('DwFX')">
     <div class="dunitext">Dragon Warrior</div></a>
+
+<audio id='DwFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/7/74/Dragon_6_0032.ogg'/>
 </td>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">Magic</td>
@@ -1098,8 +1119,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Kabuki_Warrior" class="dunitui">
-    <img src="https://i.imgur.com/AAGNYS3.jpg">
+    <img src="https://i.imgur.com/AAGNYS3.jpg"onmouseover="PlaySound('KabFX')" onmouseout="StopSound('KabFX')">
     <div class="dunitext">Kabuki Warrior</div></a></td>
+<audio id='KabFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/3/34/Kabuki_0010.ogg'/>
     <td class="xl271547_D">Magic</td>
     <td class="xl271547_D">Magic</td>
     <td class="xl271547_D">
@@ -1125,8 +1147,9 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Samurai" class="dunitui">
-    <img src="https://i.imgur.com/Bx7gq3O.jpg">
+    <img src="https://i.imgur.com/Bx7gq3O.jpg"onmouseover="PlaySound('SamFX')" onmouseout="StopSound('SamFX')">
     <div class="dunitext">Samurai</div></a>
+<audio id='SamFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/5/59/Dragon_5_0040.ogg'/>
 </td>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">Piercing</td>
@@ -1151,9 +1174,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Battle_Maiden" class="dunitui">
-    <img src="https://i.imgur.com/ssefvBF.jpg">
+    <img src="https://i.imgur.com/ssefvBF.jpg"onmouseover="PlaySound('BmFX')" onmouseout="StopSound('BmFX')">
     <div class="dunitext">Battle Maiden</div></a>
 </td>
+<audio id='BmFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/a/a0/WOTW_Battle_Maiden_0005.ogg'/>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">
@@ -1181,9 +1205,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Guardian" class="dunitui">
-    <img src="https://i.imgur.com/oHtagsD.jpg">
+    <img src="https://i.imgur.com/oHtagsD.jpg"onmouseover="PlaySound('GuardFX')" onmouseout="StopSound('GuardFX')">
     <div class="dunitext">Guardian</div></a>
 </td>
+<audio id='GuardFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/f/fa/WOTW_Guardian_0000.ogg'/>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D"><input id="collapsible_guard" class="toggle" type="checkbox">
@@ -1200,9 +1225,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547">
     <td class="xl271547_D">
  <a href="https://battlerealms.fandom.com/wiki/Otomo" class="dheroui">
-    <img src="https://i.imgur.com/EB0XJ98.jpg">
+    <img src="https://i.imgur.com/EB0XJ98.jpg"onmouseover="PlaySound('OtoFX')" onmouseout="StopSound('OtoFX')">
     <div class="dunitext">Otomo</div></a>
 </td>
+<audio id='OtoFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/c/c7/Otomo_0050.ogg'/>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D">
@@ -1223,9 +1249,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
     <td class="xl271547_D"><div class="dheroui">
  <a href="https://battlerealms.fandom.com/wiki/Tao" class="dheroui">
-    <img src="https://i.imgur.com/JZIYI6n.jpg">
+    <img src="https://i.imgur.com/JZIYI6n.jpg"onmouseover="PlaySound('TaoFX')" onmouseout="StopSound('TaoFX')">
     <div class="dunitext">Tao</div></a>
     </td>
+<audio id='TaoFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/f/f0/Tao_0030.ogg'/>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D">
@@ -1247,9 +1274,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547"> 
  <td class="xl271547_D"><div class="dheroui">
  <a href="https://battlerealms.fandom.com/wiki/Arah" class="dheroui">
-    <img src="https://i.imgur.com/YgYxdtN.jpg">
+    <img src="https://i.imgur.com/YgYxdtN.jpg"onmouseover="PlaySound('ArahFX')" onmouseout="StopSound('ArahFX')">
     <div class="dunitext">Arah</div></a>
     </td>
+<audio id='ArahFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/0/01/Arah_0010.ogg'/>
     <td class="xl271547_D">Cutting</td>
     <td class="xl271547_D">Piercing</td>
     <td class="xl271547_D">N/A</td>
@@ -1266,9 +1294,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
  <td class="xl271547_D"><div class="dheroui">
  <a href="https://battlerealms.fandom.com/wiki/Teppo" class="dheroui">
-    <img src="https://i.imgur.com/hGGzNrM.jpg">
+    <img src="https://i.imgur.com/hGGzNrM.jpg"onmouseover="PlaySound('TepFX')" onmouseout="StopSound('TepFX')">
     <div class="dunitext">Teppo</div></a>
     </td>
+<audio id='TepFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/b/b1/WOTW_Teppo_0070.ogg'/>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">Explosive</td>
     <td class="xl271547_D">
@@ -1288,9 +1317,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl161547"> 
  <td class="xl271547_D"><div class="dheroui">
  <a href="https://battlerealms.fandom.com/wiki/Kazan" class="dheroui">
-    <img src="https://i.imgur.com/hhbXxVL.jpg">
+    <img src="https://i.imgur.com/hhbXxVL.jpg"onmouseover="PlaySound('KazFX')" onmouseout="StopSound('KazFX')">
     <div class="dunitext">Kazan</div></a>
     </td>
+<audio id='KazFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/9/9e/Kazan_0010.ogg'/>
     <td class="xl271547_D">Blunt</td>
     <td class="xl271547_D">Fire</td>
     <td class="xl271547_D">☯ <b>Flame Breath</b> (Explosive)</td>
@@ -1307,9 +1337,10 @@ Wolf peasants will always feed horses to their wolves.
    <tr class="xl151547"> 
  <td class="xl271547_D"><div class="dheroui">
  <a href="https://battlerealms.fandom.com/wiki/Garrin" class="dheroui">
-    <img src="https://i.imgur.com/K2e0VR5.jpg">
+    <img src="https://i.imgur.com/K2e0VR5.jpg"onmouseover="PlaySound('GarFX')" onmouseout="StopSound('GarFX')">
     <div class="dunitext">Garrin</div></a>
     </td>
+<audio id='GarFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/c/cd/Garrin_0060.ogg'/>
     <td class="xl271547_D">Piercing</td>
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D">N/A</td>
