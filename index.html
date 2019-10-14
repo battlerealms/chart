@@ -297,7 +297,7 @@ input[type='checkbox'] {
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
-max-height: 800px;
+max-height: 2000px;
 opacity:1;
 line-height: 1.35;
 }
@@ -764,6 +764,9 @@ Such values in the game are <font style="color:orange"><strong>multipliers</stro
 However, it's unclear how exactly Poison works. As of now, it cuts the base damage (that is not magical) of a unit by 50% and usually deals very little damage on its own.<br><br>
 <b>Battle Gears</b><br><br> Damage types or certain effects of Units' BGs.<br><br>
 <b>Innate Abilities</b><br><br> Special features of various units that are omnipresent or triggerable.<br><br>
+
+<b>Order Processing</b><br><br> Order Processing is what game considers your units listening to commands and remembering their "behavior settings" (Stand Ground, Passiveness etc.). Some abilities disable that based on their effects, usually it's temporary, but whenever the effect itself wears off, you'll have to reissue orders to your troops unless you want to see them doing their own thing (like running away to their death).<br><br>
+
 <b>AoE = Area of Effect damage</b>  <br> <br>
 <u><b>SP = Unit is available only in the Single Player campaign.</u></b>      </font></p>
     </div>
@@ -1101,7 +1104,7 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_D">Magic</td>
     <td class="xl271547_D">
     <input id="collapsible_kab" class="toggle" type="checkbox">
-<label for="collapsible_kab" class="lbl-toggle" tabindex="0"><b>Flash Powder</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses nearby enemies, making them easier targets (Force-stop effect, enemies take +50% more damage, line Of Sight -90%/ 20sec/AoE).</p></div></div>
+<label for="collapsible_kab" class="lbl-toggle" tabindex="0"><b>Flash Powder</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses nearby enemies, making them easier targets (Force-Stop Effect, disables Order Processing, Enemies take +50% more damage, Line Of Sight -90% / 20sec/AoE).</p></div></div>
     <input id="collapsible_kab2" class="toggle" type="checkbox">
 <label for="collapsible_kab2" class="lbl-toggle" tabindex="0"><b>Star Dust</b></label><div class="collapsible-content"><div class="content-inner"><p>Prevents enemy rangers' from shooting (20sec/AoE).</p></div></div>
 </td>
@@ -1367,7 +1370,7 @@ Wolf peasants will always feed horses to their wolves.
     <img src="https://i.imgur.com/OnIc1Uk.jpg">
     <div class="sunitext">Serpent Peasant</div></a>
 </td>
-    <td class="xl271547_S">Piecing</td>
+    <td class="xl271547_S">Piercing</td>
     <td class="xl271547_S" colspan="3">N/A</td>
 
     <td class="xl271547_S">
@@ -1557,7 +1560,7 @@ Wolf peasants will always feed horses to their wolves.
 <b>Mines</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
 <input id="collapsible_can2" class="toggle" type="checkbox">
 <label for="collapsible_can2" class="lbl-toggleS" tabindex="0">
-<b>Smoke Bomb</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses enemies (Force-stop effect, Damage -50%, Line Of Sight -90% for 15 sec)</p></div></div>
+<b>Smoke Bomb</b></label><div class="collapsible-content"><div class="content-inner"><p>Blinds and confuses enemies (Force-Stop Effect, disables Order Processing, Damage -50%, Line Of Sight -90% for 15 sec / AoE)</p></div></div>
 </td>
     <td class="xl271547_S">
     <input id="collapsible_can3" class="toggle" type="checkbox">
@@ -1715,6 +1718,9 @@ Wolf peasants will always feed horses to their wolves.
 <input id="collapsible_sw" class="toggle" type="checkbox">
 <label for="collapsible_sw" class="lbl-toggleS" tabindex="0">
 <b>Floater</b></label><div class="collapsible-content"><div class="content-inner"><p>Spirit Warrior always has height advantage.</p></div></div>
+<input id="collapsible_sw2" class="toggle" type="checkbox">
+<label for="collapsible_sw2" class="lbl-toggleS" tabindex="0">
+<b>Undead</b></label><div class="collapsible-content"><div class="content-inner"><p>Spirit Warrior doesn't recover health.</p></div></div>
 </td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
     <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
@@ -1921,7 +1927,7 @@ Wolf peasants will always feed horses to their wolves.
 <tr>
    <tr class="xl161547"> 
     <td class="xl271547_S" style="font-size:12pt;box-shadow: 0 0 4px #990000, 0 0 2px #4c0000;color:#b20000"><b>Serpent Watchtower</b></td>
-    <td class="xl271547_S" colspan="12" style="font-size:12pt;color:white;text-align:center">Confuses all enemies around the watchtower (Force-stop effect, Units takes 50% more damage from all attacks, Line Of Sight -90% for 15 sec/ 2 charges).</b><br></td>
+    <td class="xl271547_S" colspan="12" style="font-size:12pt;color:white;text-align:center">Confuses all enemies around the watchtower (Force-Stop Effect, disables Order Processing, Units takes 50% more damage from all attacks, Line Of Sight -90% for 15 sec / 2 charges).</b><br></td>
   </tr>
 
 
@@ -2243,7 +2249,7 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_W">N/A</td>
     <td class="xl271547_W">
 <input id="collapsible_ww0" class="toggle" type="checkbox">
-<label for="collapsible_ww0" class="lbl-toggleW" tabindex="0"><b>Wolf Bite</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing)</p></div></div></td>
+<label for="collapsible_ww0" class="lbl-toggleW" tabindex="0"><b>Wolf Bite</b></label><div class="collapsible-content"><div class="content-inner"><p>(Piercing, turns target into a pack wolf if killed by the ability)</p></div></div></td>
     <td class="xl271547_W">
 <input id="collapsible_ww" class="toggle" type="checkbox">
 <label for="collapsible_ww" class="lbl-toggleW" tabindex="0"><b>Natural Hunter</b></label><div class="collapsible-content"><div class="content-inner"><p>Werewolf runs incredibly fast and recovers stamina very quickly when idling.</p></div></div>
@@ -2649,7 +2655,11 @@ Wolf peasants will always feed horses to their wolves.
     </td>
     <td class="xl271547_L">Piercing</td>
     <td class="xl271547_L">Piercing</td>
-    <td class="xl271547_L" colspan="3" rowspan="3">N/A</td>
+    <td class="xl271547_L" rowspan="3">N/A</td>
+    <td class="xl271547_L" rowspan="3"><input id="collapsible_bros" class="toggle" type="checkbox">
+<label for="collapsible_bros" class="lbl-toggleL" tabindex="0"><b>Undead</b></label><div class="collapsible-content"><div class="content-inner"><p>Brothers don't recover health and stamina naturally.</p></div></div>
+</td>
+    <td class="xl271547_L" rowspan="3">N/A</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0" colspan="6" rowspan="3"><font size="3">100%</td>
    <tr class="xl151547"> 
     <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Brother_Lythis" class="lheroui">
@@ -2723,13 +2733,15 @@ Wolf peasants will always feed horses to their wolves.
 <input id="collapsible_diseased5" class="toggle" type="checkbox">
 <label for="collapsible_diseased5" class="lbl-toggleL" tabindex="0"><b>Poisonous Breath</b></label><div class="collapsible-content"><div class="content-inner"><p>Diseased One deals additional poison damage.</p></div></div>
     </td>
-      <td class="xl271547_L">
-<input id="collapsible_diseased5" class="toggle" type="checkbox">
-<label for="collapsible_diseased5" class="lbl-toggleL" tabindex="0"><b>Leprosy</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's attack damage by 30%.</p></div></div>
+      <td class="xl271547_L" rowspan="2">
 <input id="collapsible_diseased6" class="toggle" type="checkbox">
-<label for="collapsible_diseased6" class="lbl-toggleL" tabindex="0"><b>Way Of The Root</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's maximum health by 40%.</p></div></div>
+<label for="collapsible_diseased6" class="lbl-toggleL" tabindex="0"><b>Leprosy</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's and Infested One's attack damage by 30%.</p></div></div>
 <input id="collapsible_diseased7" class="toggle" type="checkbox">
-<label for="collapsible_diseased7" class="lbl-toggleL" tabindex="0"><b>Strength Of The Trunk</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's maximum health by 30%.</p></div></div>
+<label for="collapsible_diseased7" class="lbl-toggleL" tabindex="0"><b>Way Of The Root</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's and Infested One's maximum health by 40%.</p></div></div>
+<input id="collapsible_diseased8" class="toggle" type="checkbox">
+<label for="collapsible_diseased8" class="lbl-toggleL" tabindex="0"><b>Strength Of The Trunk</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Diseased One's maximum health by 30%.</p></div></div>
+<input id="collapsible_infested6" class="toggle" type="checkbox">
+<label for="collapsible_infested6" class="lbl-toggleL" tabindex="0"><b>Bond Of Pestilence</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN (Infested One)</b>- does nothing at all. Supposed to increase AoE range.</p></div></div>
 </td>
     <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
@@ -2737,8 +2749,6 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
     <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">150%</td>
     <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
-</tr>
-<tr>
    <tr class="xl161547"> 
     <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Infested_One" class="lunitui">
     <img src="https://i.imgur.com/XOIWExv.jpg">
@@ -2754,14 +2764,6 @@ Wolf peasants will always feed horses to their wolves.
 <label for="collapsible_infested2" class="lbl-toggleL" tabindex="0"><b>Corruption</b></label><div class="collapsible-content"><div class="content-inner"><p>Infested One quickly loses stamina when running.</p></div></div>
 <input id="collapsible_infested3" class="toggle" type="checkbox">
 <label for="collapsible_infested3" class="lbl-toggleL" tabindex="0"><b>Eruption</b></label><div class="collapsible-content"><div class="content-inner"><p>After death, Infested One explodes in a damaging spray of maggots, unless he is reborn (Piercing).</p></div></div>
-    </td>
-    <td class="xl271547_L">
-<input id="collapsible_infested4" class="toggle" type="checkbox">
-<label for="collapsible_infested4" class="lbl-toggleL" tabindex="0"><b>Leprosy</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Infested One's attack damage by 30%.</p></div></div>
-<input id="collapsible_infested5" class="toggle" type="checkbox">
-<label for="collapsible_infested5" class="lbl-toggleL" tabindex="0"><b>Way Of The Root</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Infested One's maximum health by 40%.</p></div></div>
-<input id="collapsible_infested6" class="toggle" type="checkbox">
-<label for="collapsible_infested6" class="lbl-toggleL" tabindex="0"><b>Bond Of Pestilence</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN</b>- does nothing at all.</p></div></div>
 </td>
     <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
