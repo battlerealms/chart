@@ -152,10 +152,15 @@ a.boxlink:hover, a.boxlink:active {
 
 a.langlink:link, a.langlink:visited {
   opacity: 0.5;
-  text-align: center;
 }
-
-a.langlink:hover, a.langlink:active {
+a.langlink:hover {
+opacity: 1;
+}
+a.langlink:hover > img{
+box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+opacity: 1;
+}
+a.langlink:active > img{
 box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 opacity: 1;
 }
@@ -725,15 +730,15 @@ function StopSound(soundobj) {
    <td class="xl261547" style="font-size:12pt;text-align:center;" colspan="12"><br>
 <a href="https://battlerealms.fandom.com/wiki/Battle_Realms%3A_Winter_of_the_Wolf"><img src="https://i.imgur.com/sD1vJmJ.png" style="padding-bottom:0.1rem;width:50%;height:80%"></a>
 <br><b>Version: 1.50q (latest)</b><br><br>
-<img src="https://i.imgur.com/KGBqfCi.jpg" style="padding-top:0.01rem;width:32px;height:22px" title="Currently selected: English"/>
-<!-- <a href="https://vk.com/battlerealmsclub" class="langlink">
+<img src="https://i.imgur.com/KGBqfCi.jpg" style="margin-right:4px" title="Currently selected: English"/></a>
+<a href="https://battlerealms.github.io/chart-ru/" class="langlink">
 <img src="https://sun9-49.userapi.com/c856032/v856032670/10b8ee/xLS8O5Pf1pU.jpg" style="width:32px;height:22px" title="Switch to Russian"/>
-</a> -->
+</a>
 <br>
    <div class="wrap-collabsible" style="padding-top:0.6rem;padding-bottom:1.5rem;font-size:12pt;colspan=12">
   <input id="collapsible00" class="toggle" type="checkbox">
   <label for="collapsible00" class="lbl-toggle" tabindex="0"><strong>
-Last edit: October 15th,2019 (Unit SpeechFX)
+Last edit: October 21,2019 (More info, SpeechFX & RU link)
 </strong>
 </label>
     <div class="collapsible-content">
@@ -753,6 +758,8 @@ All the information in this chart is correct (<i>you may find it weird that Wild
 <a href="https://battlerealms.fandom.com" class="boxlink">Battle Realms Wiki</a>
 
 <a href="https://discord.gg/6knxkVe" class="boxlink">Battle Realms Community Discord</a>
+
+<a href="https://www.gog.com/game/battle_realms_winter_of_the_wolf" class="boxlink">Buy BR:WOTW on GOG</a>
 
 <a href="https://pcgamingwiki.com/wiki/Battle_Realms" class="boxlink">Battle Realms Fixes & Tweaks</a> 
 <a href="https://www.reddit.com/r/BattleRealms" class="boxlink">Battle Realms Reddit</a><br><br>
@@ -778,7 +785,7 @@ However, it's unclear how exactly Poison works. As of now, it cuts the base dama
 <b>Battle Gears</b><br><br> Damage types or certain effects of Units' BGs.<br><br>
 <b>Innate Abilities</b><br><br> Special features of various units that are omnipresent or triggerable.<br><br>
 
-<b>Order Processing</b><br><br> Order Processing is what game considers your units listening to commands and remembering their "behavior settings" (Stand Ground, Passiveness etc.). Some abilities disable that based on their effects, usually it's temporary, but whenever the effect itself wears off, you'll have to reissue orders to your troops unless you want to see them doing their own thing (like running away to their death).<br><br>
+<b>Order Processing</b><br><br> Order Processing is what game considers your units listening to commands and remembering their "behavior settings" (Stand Ground, Passiveness etc.). Some abilities disable that based on their effects (Force Stop effect), usually it's temporary, but whenever the effect itself wears off, you'll have to reissue orders to your troops unless you want to see them doing their own thing (like running away to their death).<br><br>
 
 <b>AoE = Area of Effect damage</b>  <br> <br>
 <u><b>SP = Unit is available only in the Single Player campaign.</u></b>      </font></p>
@@ -1076,7 +1083,7 @@ Wolf peasants will always feed horses to their wolves.
 </td>
     <td class="xl271547_D">
     <input id="collapsible_pk4" class="toggle" type="checkbox">
-<label for="collapsible_pk4" class="lbl-toggle" tabindex="0"><b>Pressurized Kegs</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN</b>- Adds 1,1 piercing damage to PK's attacks.</p></div></div>
+<label for="collapsible_pk4" class="lbl-toggle" tabindex="0"><b>Pressurized Kegs</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN</b>- As of now, adds 1,1 piercing damage to PK's attacks.</p></div></div>
     <input id="collapsible_pk5" class="toggle" type="checkbox">
 <label for="collapsible_pk5" class="lbl-toggle" tabindex="0"><b>Calisthenics</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases PK's maximum health by 30%.</p></div></div>
 </td>
@@ -1183,6 +1190,8 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_D">
     <input id="collapsible_bm" class="toggle" type="checkbox">
 <label for="collapsible_bm" class="lbl-toggle" tabindex="0"><b>Power Transfer</b></label><div class="collapsible-content"><div class="content-inner"><p>+50% damage increase for nearby allies (Anti-Tower/AoE).</p></div></div>
+    <input id="collapsible_bm5" class="toggle" type="checkbox">
+<label for="collapsible_bm5" class="lbl-toggle" tabindex="0"><b>Double Image</b></label><div class="collapsible-content"><div class="content-inner"><p>Maiden is divided into two different maiden-images that have 25% less hitpoints (no stamina or hp recovery) and deal 50% of the Maiden's damage, they also can't mount horses. If one of the images dies, another image becomes full Maiden.</p></div></div>
 </td>
     <td class="xl271547_D" rowspan="3">
 <input id="collapsible_bm2" class="toggle" type="checkbox">
@@ -1213,6 +1222,8 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_D">N/A</td>
     <td class="xl271547_D"><input id="collapsible_guard" class="toggle" type="checkbox">
 <label for="collapsible_guard" class="lbl-toggle" tabindex="0"><b>Concussion Smash</b></label><div class="collapsible-content"><div class="content-inner"><p>(Explosive/AoE)</p></div></div>
+    <td class="xl271547_D"><input id="collapsible_guard2" class="toggle" type="checkbox">
+<label for="collapsible_guard2" class="lbl-toggle" tabindex="0"><b>Last Stand</b></label><div class="collapsible-content"><div class="content-inner"><p>When Guardian's health reaches zero, he becomes invincible but unable to run for a short period of time. After that, Guardian dies.</p></div></div>
 </td>
     <td class="xl271547" style="color:#000000;background:#FFD700"><font size="3">125%</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
@@ -1616,7 +1627,7 @@ Wolf peasants will always feed horses to their wolves.
 <b>Cannon Sights</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Cannoneer's missile attack range by 30%.</p></div></div>
     <input id="collapsible_can6" class="toggle" type="checkbox">
 <label for="collapsible_can6" class="lbl-toggleS" tabindex="0">
-<b>Steel Cannonballs</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN</b>- Does nothing at all.</p></div></div>
+<b>Steel Cannonballs</b></label><div class="collapsible-content"><div class="content-inner"><p><b>BROKEN</b>- Was supposed to increase Cannoneer's damage against buildings.</p></div></div>
 </td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
@@ -1647,6 +1658,9 @@ Wolf peasants will always feed horses to their wolves.
 <input id="collapsible_raider3" class="toggle" type="checkbox">
 <label for="collapsible_raider3" class="lbl-toggleS" tabindex="0">
 <b>Magnesium Torches</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Raider's attack damage by 30%.</p></div></div>
+<input id="collapsible_raider5" class="toggle" type="checkbox">
+<label for="collapsible_raider5" class="lbl-toggleS" tabindex="0">
+<b>Darts</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Raider's throwing range by 30%.</p></div></div>
 <input id="collapsible_raider4" class="toggle" type="checkbox">
 <label for="collapsible_raider4" class="lbl-toggleS" tabindex="0"><b>Fortified Ale</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Raider's maximum health by 30%.</p></div></div>
 </td>
@@ -1670,6 +1684,14 @@ Wolf peasants will always feed horses to their wolves.
 <input id="collapsible_bandit" class="toggle" type="checkbox">
 <label for="collapsible_bandit" class="lbl-toggleS" tabindex="0">
 <b>Paralysis Darts</b></label><div class="collapsible-content"><div class="content-inner"><p>Paralyzes enemies for 7 seconds.</p></div></div>
+<input id="collapsible_bandit5" class="toggle" type="checkbox">
+<label for="collapsible_bandit5" class="lbl-toggleS" tabindex="0">
+<b>Invisibility</b></label><div class="collapsible-content"><div class="content-inner"><p>
+Bandit can become invisible. He won't be attacked by enemy units unless detected.</p></div></div>
+</td>
+<input id="collapsible_bandit5" class="toggle" type="checkbox">
+<label for="collapsible_bandit5" class="lbl-toggleS" tabindex="0">
+<b>Invisibility</b></label><div class="collapsible-content"><div class="content-inner"><p>Paralyzes enemies for 7 seconds.</p></div></div>
 </td>
     <td class="xl271547_S">
 <input id="collapsible_bandit2" class="toggle" type="checkbox">
@@ -1807,6 +1829,10 @@ Wolf peasants will always feed horses to their wolves.
 <input id="collapsible_enforcer" class="toggle" type="checkbox">
 <label for="collapsible_enforcer" class="lbl-toggleS" tabindex="0">
 <b>Low Blow</b></label><div class="collapsible-content"><div class="content-inner"><p>Slows down an enemy unit by 30%.</p></div></div>
+    <td class="xl271547_S">
+<input id="collapsible_enforcer4" class="toggle" type="checkbox">
+<label for="collapsible_enforcer4" class="lbl-toggleS" tabindex="0">
+<b>Hobnailed Boots</b></label><div class="collapsible-content"><div class="content-inner"><p>Increases Enfrocer's movement speed by 100%.</p></div></div>
 </td>
     <td class="xl271547_S" rowspan="3">
 <input id="collapsible_enforcer2" class="toggle" type="checkbox">
@@ -2523,7 +2549,7 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_W">N/A</td>
     <td class="xl271547_W">
 <input id="collapsible_spwolf" class="toggle" type="checkbox">
-<label for="collapsible_spwolf" class="lbl-toggleW" tabindex="0"><b>Ancestors' Gift</b></label><div class="collapsible-content"><div class="content-inner"><p>Spirit Wolf's health recovery is increased. Spirit Wolf will also detect hidden enemies at all times.</p></div></div>
+<label for="collapsible_spwolf" class="lbl-toggleW" tabindex="0"><b>Ancestors' Gift</b></label><div class="collapsible-content"><div class="content-inner"><p>Spirit Wolf's health recovery is increased. Spirit Wolf also increases Yang generation when attacking.</p></div></div>
 </td>
     <td class="xl271547_W">
 <input id="collapsible_spwolf2" class="toggle" type="checkbox">
@@ -2865,7 +2891,7 @@ Wolf peasants will always feed horses to their wolves.
 </tr>
 <tr>
   <tr class="xl151547"> 
-    <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Master_Warlock" class="lunitui">
+    <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Warlock" class="lunitui">
     <img src="https://i.imgur.com/Ys2YN5L.jpg"onmouseover="PlaySound('WarFX')" onmouseout="StopSound('WarFX')">
     <div class="lunitext">Warlock</div></a>
 <audio id='WarFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/d/d6/Lotus_5_0090.ogg'/>
@@ -2896,7 +2922,7 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
     <td class="xl271547" style="color:#FFF;background:#660000"><font size="3">25%</td>
    <tr class="xl161547"> 
-    <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Warlock" class="lunitui">
+    <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Master_Warlock" class="lunitui">
     <img src="https://i.imgur.com/hUCmi2Z.jpg"onmouseover="PlaySound('MwFX')" onmouseout="StopSound('MwFX')">
     <div class="lunitext">Master Warlock</div></a>
 <audio id='MwFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/7/7b/Lotus_6_0020.ogg'/>
@@ -3099,7 +3125,6 @@ Wolf peasants will always feed horses to their wolves.
     <td class="xl271547_L"><a href="https://battlerealms.fandom.com/wiki/Golem" class="lunitui">
     <img src="https://i.imgur.com/2HDRwH0.jpg"onmouseover="PlaySound('GolFX')" onmouseout="StopSound('GolFX')">
     <div class="lunitext">Golem</div></a>
-    
 <audio id='GolFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/1/1a/SHALE_LORD_0010.ogg'/>
     </td>
     <td class="xl271547_L">N/A</td>
@@ -3119,15 +3144,13 @@ Wolf peasants will always feed horses to their wolves.
 </tr>
    <tr class="xl151547"> 
     <td class="xl271547_L" style="text-shadow: 0px 0px 1px black;font-size:12pt; box-shadow: 0 0 4px #730073, 0 0 2px #751975;"><b><font style="color:purple">Lotus Watchtower</b></font></td>
-    <td class="xl271547_L" colspan="12" style="color:white;padding-right:4rem; padding-left:4rem;font-size:12pt">Unleashes lightning strikes on randomly picked areas around the tower (Magic-Explosive/AoE/3 Charges).<br><br>
+    <td class="xl271547_L" colspan="12" style="color:white;padding-right:4rem; padding-left:4rem;font-size:12pt">Unleashes lightning strikes on randomly picked enemies around the tower (Magic-Explosive/AoE/3 Charges).<br><br>
 Lotus Tower can also teleport units entering it to another Lotus Tower (directed by rally points).</td>
   </tr>
    <tr class="xl151547"> 
     <td class="xl271547_L" style="text-shadow: 0px 0px 1px black;font-size:12pt; box-shadow: 0 0 4px #730073, 0 0 2px #751975;"><b><font style="color:purple">The Three Brothers</b></font></td>
     <td class="xl271547_L" colspan="12" style="color:white;padding-right:4rem; padding-left:4rem;font-size:12pt">Lotus Brothers increase the generation of Yin for the Clan when fighting. They don't grow stronger with Yin points and can't regenerate health or stamina.<br></td>
   </tr>
-  
-  
   
   
   <tr>
@@ -3149,7 +3172,7 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
   <tr class="xl151547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Wolf" class="nunitui">
-    <img src="https://i.imgur.com/oTc2gqz.jpg">
+    <img src="https://i.imgur.com/oTc2gqz.jpg"onmouseover="PlaySound('WolfFX')" onmouseout="StopSound('WolfFX')">
     <div class="nunitext">Wild Wolf</div></a>
     </td>
     <td class="xl271547_N">Piercing</td>
@@ -3167,8 +3190,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
  <tr>
   <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Monk" class="nunitui">
-    <img src="https://i.imgur.com/C8gySFi.jpg">
+    <img src="https://i.imgur.com/C8gySFi.jpg"onmouseover="PlaySound('MonkFX')" onmouseout="StopSound('MonkFX')">
     <div class="nunitext">Monk</div></a>
+    <audio id='MonkFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/a/ac/Monk_0020.ogg'/>
     </td>
     <td class="xl271547_N">Blunt</td>
     <td class="xl271547_N">N/A</td>
@@ -3188,8 +3212,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
   <tr>
   <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Ninja" class="nunitui">
-    <img src="https://i.imgur.com/uE1P7zz.jpg">
+    <img src="https://i.imgur.com/uE1P7zz.jpg"onmouseover="PlaySound('NinjaFX')" onmouseout="StopSound('NinjaFX')">
     <div class="nunitext">Ninja</div></a>
+    <audio id='NinjaFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/a/a6/Ninja_0050.ogg'/>
     </td>
     <td class="xl271547_N">Piercing</td>
     <td class="xl271547_N">Piercing</td>
@@ -3206,9 +3231,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
   <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Hordeling" class="nunitui">
-    <img src="https://i.imgur.com/gpdGkdv.jpg">
-    <div class="nunitext">Hordeling (SP)</div></a>
-    </td>
+    <img src="https://i.imgur.com/gpdGkdv.jpg"onmouseover="PlaySound('HordeFX')" onmouseout="StopSound('HordeFX')">
+    <div class="nunitext">Hordeling (SP)</div></a></td>
+    <audio id='HordeFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/b/b7/Hordeling_0090.ogg'/>
     <td class="xl271547_N">Piercing</td>
     <td class="xl271547_N">N/A</td>
                 <td class="xl271547_N">N/A</td>
@@ -3224,9 +3249,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
   <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Shale_Spider" class="nunitui">
-    <img src="https://i.imgur.com/kJyoYe1.jpg">
-    <div class="nunitext">Shale Spider(SP)</div></a>
-    </td>
+    <img src="https://i.imgur.com/kJyoYe1.jpg"onmouseover="PlaySound('SpiderFX')" onmouseout="StopSound('SpiderFX')">
+    <div class="nunitext">Shale Spider(SP)</div></a></td>
+    <audio id='SpiderFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/1/1d/Spider_Acid_Spit_2.ogg'/>
     <td class="xl271547_N">Piercing</td>
     <td class="xl271547_N">N/A</td>
                 <td class="xl271547_N">N/A</td>
@@ -3242,9 +3267,10 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
    <tr class="xl151547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Kenji" class="nheroui">
-    <img src="https://i.imgur.com/Yg7b6Bq.jpg">
-    <div class="nunitext">Kenji (Neutral Attire-SP)</div></a>
+    <img src="https://i.imgur.com/Yg7b6Bq.jpg"onmouseover="PlaySound('KenjiFX')" onmouseout="StopSound('KenjiFX')">
+    <div class="nunitext">Kenji (Neutral-SP)</div></a>
     </td>
+    <audio id='KenjiFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/c/c2/Kenji_0071.ogg'/>
     <td class="xl271547_N" rowspan="5">Cutting</td>
     <td class="xl271547_N">N/A</td>
         <td class="xl271547_N" rowspan="5">☯ <b>Critical Strike</b> (Piercing)</b></label><div class="collapsible-content"><div class="content-inner"><p>Kenji can inspire his allies when fighting, increasing their attack damage by 20% (AoE).</p></div></div></td>
@@ -3260,9 +3286,10 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
     <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
    <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Kenji" class="nheroui">
-    <img src="https://i.imgur.com/b9Lcbg6.jpg">
-    <div class="nunitext">Kenji (Dragon Attire-SP)</div></a>
+    <img src="https://i.imgur.com/b9Lcbg6.jpg"onmouseover="PlaySound('KenjiDFX')" onmouseout="StopSound('KenjiDFX')">
+    <div class="nunitext">Kenji (Dragon-SP)</div></a>
     </td>
+    <audio id='KenjiDFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/2/21/Kenji_0123.ogg/'/>
     <td class="xl271547_N" rowspan="4">Explosive</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
     <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
@@ -3273,9 +3300,10 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 
    <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Kenji" class="nheroui">
-    <img src="https://i.imgur.com/VdXEvVp.jpg">
-    <div class="nunitext">Kenji (Serpent Attire-SP)</div></a>
+    <img src="https://i.imgur.com/VdXEvVp.jpg"onmouseover="PlaySound('KenjiSFX')" onmouseout="StopSound('KenjiSFX')">
+    <div class="nunitext">Kenji (Serpent-SP)</div></a>
     </td>
+    <audio id='KenjiSFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/3/32/Kenji_0310.ogg'/>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">75%</td>
     <td class="xl271547" style="color:#000000;background:#7fbfff"><font size="3">50%</td>
     <td class="xl271547" style="color:#000000;background:#C0C0C0"><font size="3">100%</td>
@@ -3285,8 +3313,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 
    <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Kenji" class="nherouiK">
-    <img src="https://i.imgur.com/b9Lcbg6.jpg">
+    <img src="https://i.imgur.com/b9Lcbg6.jpg"onmouseover="PlaySound('KenjiDDFX')" onmouseout="StopSound('KenjiDDFX')">
     <div class="nunitext">Kenji (One With The Dragon-SP)</div></a>
+        <audio id='KenjiDDFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/7/74/Kenji_0110.ogg'/>
     </td>
     <td class="xl271547_N">
 <input id="collapsible_kenjid" class="toggle" type="checkbox">
@@ -3306,8 +3335,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
    <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Zymeth" class="nherouiZ">
-    <img src="https://i.imgur.com/OSn8Vgl.jpg">
+    <img src="https://i.imgur.com/OSn8Vgl.jpg"onmouseover="PlaySound('Zym2FX')" onmouseout="StopSound('Zym2FX')">
     <div class="nunitext">Zymeth (No Corruption-SP)</div></a>
+        <audio id='Zym2FX' src='https://vignette.wikia.nocookie.net/battlerealms/images/9/92/Zymeth_0480.ogg'/>
     </td>
     <td class="xl271547_N">Magic</td>
     <td class="xl271547_N">Explosive</td>
@@ -3326,9 +3356,10 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
   <tr>
   <tr class="xl151547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Nightvol" class="nherouiN">
-    <img src="https://i.imgur.com/XIGExdf.jpg">
+    <img src="https://i.imgur.com/XIGExdf.jpg"onmouseover="PlaySound('NightvolFX')" onmouseout="StopSound('NightvolFX')">
     <div class="nunitext">Nightvol (SP)</div></a>
     </td>
+            <audio id='NightvolFX' src='https://vignette.wikia.nocookie.net/battlerealms/images/e/eb/Nightvol_0080a.ogg'/>
     <td class="xl271547_N">Piercing</td>
     <td class="xl271547_N" colspan="2">N/A</td>
 
@@ -3347,8 +3378,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
 <tr>
     <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Grayback" class="nheroui">
-    <img src="https://i.imgur.com/t3Gk7Bc.jpg">
+    <img src="https://i.imgur.com/t3Gk7Bc.jpg"onmouseover="PlaySound('Gray2FX')" onmouseout="StopSound('Gray2FX')">
     <div class="nunitext">Grayback (Slave-SP)</div></a>
+            <audio id='Gray2FX' src='https://vignette.wikia.nocookie.net/battlerealms/images/4/42/Grayback_0060.ogg'/>
     </td>
     <td class="xl271547_N" rowspan="2">Piercing</td>
     <td class="xl271547_N" rowspan="2">N/A</td>
@@ -3367,8 +3399,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
     
     <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Grayback" class="wheroui">
-    <img src="https://i.imgur.com/UFdCN6U.jpg">
+    <img src="https://i.imgur.com/UFdCN6U.jpg"onmouseover="PlaySound('Gray3FX')" onmouseout="StopSound('Gray3FX')">
     <div class="wunitext">Grayback (End Game-SP)</div></a>
+                <audio id='Gray3FX' src='https://vignette.wikia.nocookie.net/battlerealms/images/e/ef/Grayback_0120.ogg'/>
     </td>
     <td class="xl271547_N">
 <input id="collapsible_egray1" class="toggle" type="checkbox">
@@ -3385,8 +3418,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
   <tr>
     <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Longtooth" class="nheroui">
-    <img src="https://i.imgur.com/6NQjQwN.jpg">
+    <img src="https://i.imgur.com/6NQjQwN.jpg"onmouseover="PlaySound('Tooth2FX')" onmouseout="StopSound('Tooth2FX')">
     <div class="nunitext">Longtooth (Slave-SP)</div></a>
+                    <audio id='Tooth2FX' src='https://vignette.wikia.nocookie.net/battlerealms/images/a/a5/WOTW_Longtooth_2000.ogg'/>
     </td>
     <td class="xl271547_N">Magic</td>
     <td class="xl271547_N">Magic</td>
@@ -3406,8 +3440,9 @@ Lotus Tower can also teleport units entering it to another Lotus Tower (directed
     <tr>
     <tr class="xl161547"> 
     <td class="xl271547_N"><a href="https://battlerealms.fandom.com/wiki/Yvaine" class="nherouiZ">
-    <img src="https://i.imgur.com/jdu8Yz3.jpg">
+    <img src="https://i.imgur.com/jdu8Yz3.jpg"onmouseover="PlaySound('Yva2FX')" onmouseout="StopSound('Yva2FX')">
     <div class="nunitext">Yvaine (Ungodly Power-SP)</div></a>
+                    <audio id='Yva2FX' src='https://vignette.wikia.nocookie.net/battlerealms/images/6/6a/WOTW_Yvaine_12060.ogg'/>
     </td>
     <td class="xl271547_N">Magic</td>
     <td class="xl271547_N">Piercing</td>
